@@ -1,361 +1,942 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!--====== Required meta tags ======-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!--====== Title ======-->
     <title>All Saints University</title>
-
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
     
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="https://allsaintsuniversity.org/wp-content/uploads/2023/05/cropped-Untitled_design__15_-removebg-preview-32x32.png" type="image/png">
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!--====== Slick css ======-->
+    <link rel="stylesheet" href="css/slick.css">
 
+    <!--====== Animate css ======-->
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <!--====== Nice Select css ======-->
+    <link rel="stylesheet" href="css/nice-select.css">
+    
+    <!--====== Nice Number css ======-->
+    <link rel="stylesheet" href="css/jquery.nice-number.min.css">
+
+    <!--====== Magnific Popup css ======-->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!--====== Fontawesome css ======-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="css/default.css">
+    
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!--====== Responsive css ======-->
+    <link rel="stylesheet" href="css/responsive.css">
+  
+  
 </head>
+
 <body>
-
-    <!-- HEADER -->
-    <header class="header-container">
-        <div class="header-left">
-            <p>admissions@allsaintsuniversity.org | 1-866-602-9555</p>
-        </div>
-        <div class="header-right">
-            <a href=""><p>Accreditation</p></a>
-            <a href=""><p>Scholarships</p></a>
-                <a href=""><i class="fab fa-envelope"></i></a>
-                <a href=""><i class="fab fa-facebook-f"></i></a>
-                <a href=""><i class="fab fa-linkedin"></i></a>
-                <a href=""><i class="fab fa-twitter"></i></a>
-                <a href=""><i class="fab fa-instagram"></i></a>
-            <button>Apply Today</button>
-            <a><i class="fa fa-user"></i></a>
-        </div>
-    </header>
-
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
-        <a class="navbar-brand" href="#">
-            <img src="https://allsaintsuniversity.org/wp-content/uploads/2023/12/Untitled-design-64.png" width="300" height="150">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    About Us
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">About All Saints</a>
-                        <a class="dropdown-item" href="#">Accreditation</a>
-                        <a class="dropdown-item" href="#">Residency Appointments</a>
-                        <a class="dropdown-item" href="#">University Life</a>
-                        <a class="dropdown-item" href="#">Management & Faculty</a>
-                        <a class="dropdown-item" href="#">Blog</a>
-                    </div>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Admission
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Applying To All Saints</a>
-                        <a class="dropdown-item" href="#">International Students</a>
-                        <a class="dropdown-item" href="#">Transfer Student</a>
-                        <a class="dropdown-item" href="#">Graduation Requirements</a>
-                    </div>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Academics
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">4-Year MD Program</a>
-                        <a class="dropdown-item" href="#">5-Year MD Program</a>
-                        <a class="dropdown-item" href="#">B.S. Nursing (BScN)</a>
-                    </div>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Financials
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Scholarships</a>
-                        <a class="dropdown-item" href="#">Providing Funding For Canadians </a>
-                        <a class="dropdown-item" href="#">Tuition & Fee</a>
-                        <a class="dropdown-item" href="#">Make A Payment</a>
-                    </div>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Clinicals
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Clinicals</a>
-                        <a class="dropdown-item" href="#">Hospital Rotations</a>
-                        <a class="dropdown-item" href="#">Ready For Clinicals?</a>
-                    </div>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Apply
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Applying To All Saints</a>
-                        <a class="dropdown-item" href="#">Application Form</a>
-                    </div>
-                </li>
-
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-
-            </ul>
-
-        </div>
-        </nav>
-
-    <!-- CAROUSEL -->
-    <div class="carousel-container">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="doctor1.jpg" alt="First slide">
-                <div class="carousel-caption text-left">
-                    <h3>Experience Top-Quality Affordable Medical Education at</h3>
-                    <h1>All Saints University</h1>
-                    <button>Apply Now</button>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="doctor2.jpg" alt="Second slide">
-                <div class="carousel-caption text-left">
-                    <h3>Start Your Journey To A Rewarding</h3>
-                    <h1>Career In Medicine Today!</h1>
-                    <button>Apply Now</button>
-                </div>
-            </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div>
-
-    <!-- SECTION CONTAINER -->
-    <div class="apply-section-container">
-        <div class="program-container">
-            <img src="https://allsaintsuniversity.org/wp-content/uploads/2018/08/icon-2.png" alt="" width="50" height="50">
-            <div class="program-left-container">
-                <h5>4 Year MD Program</h5>
-                <p>The 4-year MD degree program is designed for applicants who have a Bachelors degree in the Sciences or completion of at least two years of post secondary education…</p>
-                <a href=""><p>Learn More</p></a>
-            </div>
-            <img src="https://allsaintsuniversity.org/wp-content/uploads/2018/08/icon-2.png" alt="" width="50" height="50">
-            <div class="program-middle-container">
-                <h5>5 Year MD Program</h5>
-                <p>For recent High School graduates who are interested in getting direct admission into medicine, the 5 year MD degree program is the option for you…</p>
-                <a href=""><p>Learn More</p></a>
-            </div>
-            <img src="https://allsaintsuniversity.org/wp-content/uploads/2018/08/icon-2.png" alt="" width="50" height="50">
-            <div class="program-right-container">
-                <h5>Nursing Program</h5>
-                <p>We offer a Bachelor of Science degree programs in Nursing which includes getting hands on experience. Applicants must possess a high school/secondary school diploma or certificate…</p>
-                <a href=""><p>Learn More</p></a>
-            </div>
-
-        </div>
-
-        <div class="start-journey-container">
-
-            <div class="start-journey-left-container">
-                <img src="doctor3.jpg" alt="doctor team">
-            </div>
-
-            <div class="start-journey-right-container">
-                <div class="card bg-dark text-white">
-                    <img class="card-img" src="uni1.jpg" alt="Card image">
-                    <div class="card-img-overlay">
-                        <h3>Start Your Journey to a Rewarding Career in Medicine Today!</h3>
-                        <p>2024 applications are now open</p>
-                        <p>We don’t just give students an education and experiences that set them up for success in a career. We help them succeed in their career—to discover a field they’re passionate about and dare to lead it.</p>
-                <button>Apply Now</button>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- ABOUT ALL SAINTS -->
-    <div class="about-uni">
-        <div class="card bg-dark text-white">
-            <img class="card-img" src="doctor3.jpg" alt="Card image"  height="700">
-            <div class="card-img-overlay">
-                <div class="card-left">
-                    <h1 class="card-title">About Our University</h1>
-                </div>
-                <div class="card-right">
-                    <p class="card-text">All Saints University is a private medical school located on the Caribbean island of Dominica. It was established in 2006 with a mission to provide affordable and quality medical education to students from all over the world. The university offers a Doctor of Medicine (MD) degree program that is accredited by the Accreditation Commission on Colleges of Medicine (ACCM), Ireland. All Saints University has state-of-the-art facilities including well-equipped classrooms, laboratories, a modern library, and on-campus housing. The university also provides various extracurricular activities, including sports, cultural events, and community outreach programs. All Saints University is committed to training competent and compassionate doctors who will make a positive impact in the world.</p>
-                    <a href=""><p class="card-text">Read More</p></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer class="footer">
-
-
-        <div class="container-fluid text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5">
-                <div class="row g-5">
-
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="text-white mb-3">All Saints University School of Medicine</h4>
-                        <p>Hillsborough Street Roseau,<br>Commonwealth Of Dominica</p>
-                        <p>1 866 602 9555</p>
-                        <p>INFO@ALLSAINTSUNIVERSITY.ORG</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
-                            
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="text-white mb-3">About All Saints</h4>
-                        <a class="btn btn-link" href="">About Us</a>
-                        <a class="btn btn-link" href="">University Life</a>
-                        <a class="btn btn-link" href="">NBME Schedule</a>
-                        <a class="btn btn-link" href="">Academic Calendar</a>
-                        <a class="btn btn-link" href="">My ASU Dominica</a>
-                        <a class="btn btn-link" href="">Career</a>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="text-white mb-3">Courses & Application</h4>
-                        <a class="btn btn-link" href="">4-Year MD Program</a>
-                        <a class="btn btn-link" href="">5-Year MD Program</a>
-                        <a class="btn btn-link" href="">B.S. Nursing (BScN)</a>
-                        <a class="btn btn-link" href="">Apply To All Saints University</a>
-                        <a class="btn btn-link" href="">Application Form</a>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <h4 class="text-white mb-3">Tuition & Fees</h4>
-                        <a class="btn btn-link" href="">Tuition & Fees</a>
-                        <a class="btn btn-link" href="">Scholarships</a>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">All Saints University</a>, All Right Reserved.
+   
+    <!--====== PRELOADER PART START ======-->
     
-                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+    <div class="preloader">
+        <div class="loader rubix-cube">
+            <div class="layer layer-1"></div>
+            <div class="layer layer-2"></div>
+            <div class="layer layer-3 color-1"></div>
+            <div class="layer layer-4"></div>
+            <div class="layer layer-5"></div>
+            <div class="layer layer-6"></div>
+            <div class="layer layer-7"></div>
+            <div class="layer layer-8"></div>
+        </div>
+    </div>
+    
+    <!--====== PRELOADER PART START ======-->
+    
+    <!--====== HEADER PART START ======-->
+    
+    <header id="header-part">
+       
+        <div class="header-top d-none d-lg-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="header-contact text-lg-left text-center">
+                            <ul>
+                                <li><span><i class="fa fa-map-pin"></i>  Hillsborough Street Roseau, Dominica</span></li>
+                                <li><span><i class="fa fa-envelope"></i>  admissions@allsaintsuniversity.org</span></li>
+                            </ul>
                         </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="">Home</a>
-                                <a href="">Cookies</a>
-                                <a href="">Help</a>
-                                <a href="">FQAs</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="header-opening-time text-lg-right text-center">
+                            <p>Opening Hours : Monday to Friday - 9 Am to 5 Pm</p>
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- header top -->
+        
+        <div class="header-logo-support pt-30 pb-30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="https://allsaintsuniversity.org/wp-content/uploads/2023/12/Untitled-design-64.png" alt="Logo"  width="220" height="90">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-8">
+                        <div class="support-button float-right d-none d-md-block">
+                            <div class="support float-left">
+                                <div class="icon">
+                                    <img src="images/all-icon/support.png" alt="icon">
+                                </div>
+                                <div class="cont">
+                                    <p>Need Help? Contact us</p>
+                                    <span>1-866-602-9555</span>
+                                </div>
+                            </div>
+                            <div class="button float-left">
+                                <a href="#" class="main-btn">Apply Now</a>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- header logo support -->
+        
+        <div class="navigation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-md-10 col-sm-9 col-8">
+                        <nav class="navbar navbar-expand-lg">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item">
+                                        <a class="active" href="index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="about.html">About us</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="#">About All Saints</a></li>
+                                            <li><a href="#">Accreditation</a></li>
+                                            <li><a href="#">Residency Appointments</a></li>
+                                            <li><a href="#">University Life</a></li>
+                                            <li><a href="#">Management & Faculty</a></li>
+                                            <li><a href="#">Blog</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="courses.html">Admission</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="#">Applying To All Saints</a></li>
+                                            <li><a href="#">International Students</a></li>
+                                            <li><a href="#">Transfer Student</a></li>
+                                            <li><a href="#">Graduation Requirements</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="events.html">Academics</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="#">4-Year MD Program</a></li>
+                                            <li><a href="#">5-Year MD Program</a></li>
+                                            <li><a href="#">B.S. Nursing (BScN)</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="teachers.html">Financials</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="#">Scholarships</a></li>
+                                            <li><a href="#">Providing Funding For Canadians </a></li>
+                                            <li><a href="#">Tuition & Fee</a></li>
+                                            <li><a href="#">Make A Payment</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="blog.html">Clinicals</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="#">Clinicals</a></li>
+                                            <li><a href="#">Hospital Rotations</a></li>
+                                            <li><a href="#">Ready For Clinicals?</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="shop.html">Apply</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="#">Applying To All Saints</a></li>
+                                            <li><a href="#">Application Form</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="contact.html">Contact</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="contact-2.html">Contact Us</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav> <!-- nav -->
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-3 col-4">
+                        <!-- <div class="right-icon text-right">
+                            <ul>
+                                <li><a href="#" id="search"><i class="fa fa-search"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-bag"></i><span>0</span></a></li>
+                            </ul>
+                        </div> right icon -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
         </div>
-        <!-- Footer End -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- <div class="con">
-            <div class="row">
-                <div class="footer-col">
-                    <h4>All Saints University School of Medicine</h4>
-                    <p>Hillsborough Street Roseau,<br>Commonwealth Of Dominica</p>
-                    <p>1 866 602 9555</p>
-                    <p>INFO@ALLSAINTSUNIVERSITY.ORG</p>
-                    <p>&copy; 2022 Hernalytics</p>
-                </div>
-
-                <div class="footer-col">
-                    <h4>About All Saints</h4>
-                    <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">University Life</a></li>
-                        <li><a href="#">NBME Schedule</a></li>
-                        <li><a href="#">Academic Calendar</a></li>
-                        <li><a href="#">My ASU Dominica</a></li>
-                        <li><a href="#">Career</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Courses & Application</h4>
-                    <ul>
-                        <li><a href="#">4-Year MD Program</a></li>
-                        <li><a href="#">5-Year MD Program</a></li>
-                        <li><a href="#">B.S. Nursing (BScN)</a></li>
-                        <li><a href="#">Apply To All Saints University</a></li>
-                        <li><a href="#">Application Form</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Tuition & Fees</h4>
-                    <li><a href="#">Tuition & Fees</a></li>
-                    <li><a href="#">Scholarships</a></li>
-                </div>
-            </div>
-        </div> -->
-   </footer>
-
-
-
+        
+    </header>
+    
+    <!--====== HEADER PART ENDS ======-->
    
+    <!--====== SEARCH BOX PART START ======-->
+    
+    <!-- <div class="search-box">
+        <div class="serach-form">
+            <div class="closebtn">
+                <span></span>
+                <span></span>
+            </div>
+            <form action="#">
+                <input type="text" placeholder="Search by keyword">
+                <button><i class="fa fa-search"></i></button>
+            </form>
+        </div> 
+    </div> -->
+    
+    <!--====== SEARCH BOX PART ENDS ======-->
+   
+    <!--====== SLIDER PART START ======-->
+    
+    <section id="slider-part" class="slider-active">
+        <div class="single-slider bg_cover pt-150" style="background-image: url(images/doctor2.jpg)" data-overlay="4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-9">
+                        <div class="slider-cont">
+                            <h3 data-animation="bounceInLeft" data-delay="1s">Experience Top-Quality Affordable Medical Education at</h3>
+                            <h1 data-animation="fadeInUp" data-delay="1.3s">All Saints University</h1>
+                            <ul>
+                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="#">Read More</a></li>
+                                <li><a data-animation="fadeInUp" data-delay="1.9s" class="main-btn main-btn-2" href="#">Apply Today</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- single slider -->
+        
+        <div class="single-slider bg_cover pt-150" style="background-image: url(images/doctor3.jpg)" data-overlay="4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7 col-lg-9">
+                        <div class="slider-cont">
+                            <h3 data-animation="bounceInLeft" data-delay="1s">Start Your Journey To A Rewarding</h3>
+                            <h1 data-animation="fadeInUp" data-delay="1.3s">Career In Medicine Today!</h1>
+                            <ul>
+                                <li><a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" href="#">Read More</a></li>
+                                <li><a data-animation="fadeInUp" data-delay="1.9s" class="main-btn main-btn-2" href="#">Apply Today</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- single slider -->
+        
+    </section>
+    
+    <!--====== SLIDER PART ENDS ======-->
+   
+    <!--====== CATEGORY PART START ======-->
+    
+    <section id="category-part">
+        <div class="container">
+            <div class="category pt-40 pb-80">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="category-text pt-40">
+                            <h2>Best Caribbean Medical School for it's</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 offset-lg-1 col-md-8 offset-md-2 col-sm-8 offset-sm-2 col-8 offset-2">
+                        <div class="row category-slied mt-40">
+                            <div class="col-lg-4">
+                                <a href="#">
+                                    <span class="singel-category text-center color-1">
+                                        <span class="icon">
+                                            <img src="images/all-icon/education.png" alt="Icon">
+                                        </span>
+                                        <span class="cont">
+                                            <span>Quality Education</span>
+                                        </span>
+                                    </span> <!-- singel category -->
+                                </a>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="#">
+                                    <span class="singel-category text-center color-2">
+                                        <span class="icon">
+                                            <img src="images/all-icon/affordable.png" alt="Icon">
+                                        </span>
+                                        <span class="cont">
+                                            <span>Affordability</span>
+                                        </span>
+                                    </span> <!-- singel category -->
+                                </a>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="#">
+                                    <span class="singel-category text-center color-3">
+                                        <span class="icon">
+                                            <img src="images/all-icon/student.png" alt="Icon">
+                                        </span>
+                                        <span class="cont">
+                                            <span>Student Success</span>
+                                        </span>
+                                    </span> <!-- singel category -->
+                                </a>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="#">
+                                    <span class="singel-category text-center color-1">
+                                        <span class="icon">
+                                            <img src="images/all-icon/education.png" alt="Icon">
+                                        </span>
+                                        <span class="cont">
+                                            <span>Quality Education</span>
+                                        </span>
+                                    </span> <!-- singel category -->
+                                </a>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="#">
+                                    <span class="singel-category text-center color-2">
+                                        <span class="icon">
+                                            <img src="images/all-icon/affordable.png" alt="Icon">
+                                        </span>
+                                        <span class="cont">
+                                            <span>Affordability</span>
+                                        </span>
+                                    </span> <!-- singel category -->
+                                </a>
+                            </div>
+                            <div class="col-lg-4">
+                                <a href="#">
+                                    <span class="singel-category text-center color-3">
+                                        <span class="icon">
+                                            <img src="images/all-icon/student.png" alt="Icon">
+                                        </span>
+                                        <span class="cont">
+                                            <span>Student Success</span>
+                                        </span>
+                                    </span> <!-- singel category -->
+                                </a>
+                            </div>
+                        </div> <!-- category slied -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- category -->
+        </div> <!-- container -->
+    </section>
+    
+    <!--====== CATEGORY PART ENDS ======-->
+   
+    <!--====== ABOUT PART START ======-->
+    
+    <section id="about-part" class="pt-65">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="section-title mt-50">
+                        <h5>About us</h5>
+                        <h2>Welcome to All Saints University</h2>
+                    </div> <!-- section title -->
+                    <div class="about-cont">
+                        <p>All Saints University is a private medical school located on the Caribbean island of Dominica. It was established in 2006 with a mission to provide affordable and quality medical education to students from all over the world. The university offers a Doctor of Medicine (MD) degree program that is accredited by the Accreditation Commission on Colleges of Medicine (ACCM), Ireland. All Saints University has state-of-the-art facilities including well-equipped classrooms, laboratories, a modern library, and on-campus housing. The university also provides various extracurricular activities, including sports, cultural events, and community outreach programs. All Saints University is committed to training competent and compassionate doctors who will make a positive impact in the world.</p>
+                        <a href="#" class="main-btn mt-55">Learn More</a>
+                    </div>
+                </div> <!-- about cont -->
+                <div class="col-lg-6 offset-lg-1">
+                    <div class="about-event mt-50">
+                        <div class="event-title">
+                            <h3>Upcoming events</h3>
+                        </div> <!-- event title -->
+                        <ul>
+                            <li>
+                                <div class="singel-event">
+                                    <span><i class="fa fa-calendar"></i></span>
+                                    <a href="events-singel.html"><h4>No Upcoming Events Scheduled</h4></a>
+                                    <span><i class="fa fa-clock-o"></i>Check Back Later!</span>
+                                    <span><i class="fa fa-map-marker"></i>All Saints University</span>
+                                </div>
+                            </li>
+                            <!-- <li>
+                                <div class="singel-event">
+                                    <span><i class="fa fa-calendar"></i> 2 December 2018</span>
+                                    <a href="events-singel.html"><h4>Tech Summit</h4></a>
+                                    <span><i class="fa fa-clock-o"></i> 10:00 Am - 3:00 Pm</span>
+                                    <span><i class="fa fa-map-marker"></i> Rc Auditorim</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="singel-event">
+                                    <span><i class="fa fa-calendar"></i> 2 December 2018</span>
+                                    <a href="events-singel.html"><h4>Enviroement conference</h4></a>
+                                    <span><i class="fa fa-clock-o"></i> 10:00 Am - 3:00 Pm</span>
+                                    <span><i class="fa fa-map-marker"></i> Rc Auditorim</span>
+                                </div>
+                            </li> -->
+                        </ul> 
+                    </div> <!-- about event -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+        <div class="about-bg">
+            <img src="images/doctor1.jpg" alt="About">
+        </div>
+    </section>
+    
+    <!--====== ABOUT PART ENDS ======-->
+   
+    <!--====== APPLY PART START ======-->
+    
+    <section id="apply-aprt" class="pb-120">
+        <div class="container">
+            <div class="apply">
+                <div class="row no-gutters">
+                    <div class="col-lg-6">
+                        <div class="apply-cont apply-color-1">
+                            <h3>Start Your Journey in Medicine</h3>
+                            <h5>2024 applications are now open</h5>
+                            <p>We don’t just give students an education and experiences that set them up for success in a career. We help them succeed in their career—to discover a field they’re passionate about and dare to lead it.</p>
+                            <a href="#" class="main-btn">Apply Now</a>
+                        </div> <!-- apply cont -->
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="apply-cont apply-color-2">
+                            <h3>Apply for scholarship</h3>
+                            <h5>Your Path to Affordable Excellence</h5>
+                            <p>All Saints University believes in providing quality medical education that is affordable for students worldwide. To make this a reality, the university offers a 20% scholarship on tuition fees to all qualified students. </p>
+                            <a href="#" class="main-btn">Apply Now</a>
+                        </div> <!-- apply cont -->
+                    </div> 
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    
+    <!--====== APPLY PART ENDS ======-->
+   
+   
+    <!--====== PROGRAM PART START ======-->
+    
+    <section id="program" class="bg_cover pt-115 pb-115" data-overlay="8" style="background-image: url(images/bg-2.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title pb-40">
+                        <h5>Programs</h5>
+                        <h2>Academics</h2>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row program-slied mt-40">
+                <div class="col-lg-6">
+                    <div class="singel-program">
+                        <div class="program-thum">
+                            <img src="images/all-icon/grad.png" alt="Graduation Cap">
+                        </div>
+                        <div class="program-cont">
+                            <h3>4-Year MD Program</h3>
+                            <p>The 4-year MD degree program is designed for applicants who have a Bachelors degree in the Sciences or completion of at least two years of post secondary education…</p>
+                            <a href=""><h6>Learn More</h6></a>
+                        </div>
+                    </div> <!-- singel program -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="singel-program">
+                        <div class="program-thum">
+                            <img src="images/all-icon/grad.png" alt="Graduation Cap">
+                        </div>
+                        <div class="program-cont">
+                            <h3>5-Year MD Program</h3>
+                            <p>For recent High School graduates who are interested in getting direct admission into medicine, the 5 year MD degree program is the option for you…</p>
+                            <a href=""><h6>Learn More</h6></a>
+                        </div>
+                    </div> <!-- singel program -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="singel-program">
+                        <div class="program-thum">
+                            <img src="images/all-icon/grad.png" alt="Graduation Cap">
+                        </div>
+                        <div class="program-cont">
+                            <h3>Nursing Program</h3>
+                            <p>We offer a Bachelor of Science degree programs in Nursing which includes getting hands on experience. Applicants must possess a high school/secondary school diploma or certificate…</p>
+                            <a href=""><h6>Learn More</h6></a>
+                        </div>
+                    </div> <!-- singel program -->
+                </div>
+            </div> <!-- program slied -->
+        </div> <!-- container -->
+    </section>
 
+    <!--====== PROGRAM PART ENDS ======-->
+   
+    <!--====== COURSE PART START ======-->
+    
+    <section id="course-part" class="pt-115 pb-120 gray-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title pb-45">
+                        <h2>Why Choose All Saints University?</h2>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row course-slied mt-30">
+                <div class="col-lg-4">
+                    <div class="singel-course">
+                        <div class="thum">
+                            <div class="image">
+                                <img src="images/doctor4.jpg" alt="Course">
+                            </div>
+                            <div class="price">
+                                <span>Benefits</span>
+                            </div>
+                        </div>
+                        <div class="cont">
+                            <p>All Saints University is an excellent choice for students who are passionate about pursuing a career in medicine. The university offers accredited and affordable degree programs in medicine, nursing, and healthcare administration, providing students with the knowledge and skills they need to succeed in their chosen field. With a focus on hands-on training and real-world experience, All Saints University prepares its graduates for success in the ever-evolving world of healthcare. Moreover, the university’s location in the Caribbean offers an ideal learning environment with a multicultural experience. Choose All Saints University for a quality education that prepares you for a rewarding career in medicine.</p>
+                        </div>
+                    </div> <!-- singel course -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="singel-course">
+                        <div class="thum">
+                            <div class="image">
+                                <img src="images/doctor6.jpg" alt="Course">
+                            </div>
+                            <div class="price">
+                                <span>Accreditation</span>
+                            </div>
+                        </div>
+                        <div class="cont">
+                            <p>All Saints University is an accredited institution that offers high-quality medical education to students around the world. The university is accredited by international accreditation bodies, including the Accreditation Commission on Colleges of Medicine (ACCM) in Ireland, which has recognized the Doctor of Medicine (MD) degree programs of All Saints University School of Medicine, Dominica. Additionally, the university is recognized by the Medical Council of Canada (MCC) and the World Health Organization (WHO), allowing graduates to sit for qualifying examinations, obtain practice licenses and practice medicine in various countries. All Saints University is committed to providing accredited programs that meet the highest standards of medical education.</p>
+                        </div>
+                    </div> <!-- singel course -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="singel-course">
+                        <div class="thum">
+                            <div class="image">
+                                <img src="images/dominica.jpeg" alt="Course">
+                            </div>
+                            <div class="price">
+                                <span>Life At All Saints</span>
+                            </div>
+                        </div>
+                        <div class="cont">
+                            <p>Life on campus at All Saints University School of Medicine is vibrant and engaging. With a modern and well-equipped campus in the heart of the city of Roseau, the capital of Dominica, students have access to state-of-the-art facilities for learning and relaxation. The campus features well-equipped classrooms and laboratories, a library with tens of thousands of resources, a cafeteria with a variety of food and refreshment options, and a lounge and gym room for students to relax or work out. Round-the-clock security ensures safety on campus, and the University also provides transportation services and assistance with housing for students.</p>
+                        </div>
+                    </div> <!-- singel course -->
+                </div>
+                <div class="col-lg-4">
+                    <div class="singel-course">
+                        <div class="thum">
+                            <div class="image">
+                                <img src="images/doctor5.jpg" alt="Course">
+                            </div>
+                            <div class="price">
+                                <span>Alumni</span>
+                            </div>
+                        </div>
+                        <div class="cont">
+                            <p>The alumni of All Saints University are spread across the globe, making significant contributions in the field of medicine. Graduates from All Saints University are practicing medicine in various countries, including the United States, Canada, and Dominica, and all UN-member states. The university has an active alumni association that fosters lifelong connections and networking opportunities for graduates. The alumni association organizes various events, seminars, and workshops to keep graduates updated on the latest developments in medicine and healthcare. The alumni of All Saints University are a testament to the quality of education provided by the university, and their success in their respective fields is a source of pride for the institution.</p>
+                        </div>
+                    </div> <!-- singel course -->
+                </div>
+            </div> <!-- course slied -->
+        </div> <!-- container -->
+    </section>
+    
+    <!--====== COURSE PART ENDS ======-->
+   
+  
+   
+    <!--====== VIDEO PART START ======-->
+    
+    <section id="video-feature" class="bg_cover pt-60 pb-110" style="background-image: url(images/uni1.jpg)">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-last order-lg-first">
+                    <div class="video text-lg-left text-center pt-50">
+                        <a class="Video-popup" href="https://www.youtube.com/embed/xe9GtRJbXIE"><i class="fa fa-play"></i></a>
+                    </div> <!-- row -->
+                </div>
+                <div class="col-lg-5 offset-lg-1 order-first order-lg-last">
+                    <div class="feature pt-50">
+                        <div class="feature-title">
+                            <h3>Our Facilities</h3>
+                        </div>
+                        <ul>
+                            <li>
+                                <div class="singel-feature">
+                                    <div class="icon">
+                                        <img src="images/apply.png" alt="icon" width="70" height="70">
+                                    </div>
+                                    <div class="cont">
+                                        <h4>Apply</h4>
+                                        <p>Discover how to apply to All Saints University for a chance to study medicine and pursue your dream.</p>
+                                    </div>
+                                </div> <!-- singel feature -->
+                            </li>
+                            <li>
+                                <div class="singel-feature">
+                                    <div class="icon">
+                                        <img src="images/handshake.png" alt="icon">
+                                    </div>
+                                    <div class="cont">
+                                        <h4>Fees & Support</h4>
+                                        <p>All Saints University offers affordable tuition fees with various payment options.</p>
+                                    </div>
+                                </div> <!-- singel feature -->
+                            </li>
+                            <li>
+                                <div class="singel-feature">
+                                    <div class="icon">
+                                        <img src="images/scholarship.png" alt="icon">
+                                    </div>
+                                    <div class="cont">
+                                        <h4>Scholarships & Financial AID</h4>
+                                        <p>All Saints University provides various scholarships and financial adid to help students pursue their medical education.</p>
+                                    </div>
+                                </div> <!-- singel feature -->
+                            </li>
+                        </ul>
+                    </div> <!-- feature -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+        <div class="feature-bg"></div> <!-- feature bg -->
+    </section>
+    
+    <!--====== VIDEO PART ENDS ======-->
+   
+    <!--====== NEWS PART START ======-->
+    
+    <section id="news-part" class="pt-115 pb-110">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title pb-50">
+                        <h5>Latest News</h5>
+                        <h2>News & Updates</h2>
+                    </div> <!-- section title -->
+                </div>
+            </div> <!-- row -->
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="singel-news mt-30">
+                        <div class="news-thum pb-25">
+                            <img src="https://allsaintsuniversity.org/wp-content/uploads/2023/07/image.png" alt="News">
+                        </div>
+                        <div class="news-cont">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-calendar"></i>December 4, 2023 </a></li>
+                                <li><a href="#"> <span>By</span> Web Admin</a></li>
+                            </ul>
+                            <a href=""><h3>Accredited & Affordable Medical Education: Your Path to a Promising Career</h3></a>
+                            <p>Affordable Medical Education, Study At All Saints University, Study Medicine Abroad, Study Medicine in the Caribbean.</p>
+                        </div>
+                    </div> <!-- singel news -->
+                </div>
+                <div class="col-lg-6">
+                    <div class="singel-news news-list">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="news-thum mt-30">
+                                    <img src="https://allsaintsuniversity.org/wp-content/uploads/2023/06/RIV4WCZ-scaled.jpg" alt="News">
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="news-cont mt-30">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-calendar"></i>November 15, 2023 </a></li>
+                                        <li><a href="#"> <span>By</span> Web Admin</a></li>
+                                    </ul>
+                                    <a href=""><h3>Why All Saints University is the Best and Most Affordable Option to Study Medicine in the Caribbean?</h3></a>
+                                    <p>Affordable Medical Education, Study At All Saints University, Study Medicine Abroad, Study Medicine in the Caribbean.</p>
+                                </div>
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- singel news -->
+                    <div class="singel-news news-list">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="news-thum mt-30">
+                                    <img src="https://allsaintsuniversity.org/wp-content/uploads/2023/11/pexels-karolina-grabowska-4386431-scaled.jpg" alt="News">
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="news-cont mt-30">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-calendar"></i>November 15, 2023</a></li>
+                                        <li><a href="#"> <span>By</span> Web Admin</a></li>
+                                    </ul>
+                                    <a href=""><h3>Choosing an Affordable Medical School in the Caribbean</h3></a>
+                                    <p>Affordable Medical Education, Study At All Saints University, Study Medicine Abroad, Study Medicine in the Caribbean.</p>
+                                </div>
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- singel news -->
+                    <div class="singel-news news-list">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="news-thum mt-30">
+                                    <img src="https://allsaintsuniversity.org/wp-content/uploads/2023/07/image.png" alt="News">
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="news-cont mt-30">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-calendar"></i>November 15, 2023 </a></li>
+                                        <li><a href="#"> <span>By</span> Web Admin</a></li>
+                                    </ul>
+                                    <a href=""><h3>Affordable Caribbean Medical Schools: What to Check?</h3></a>
+                                    <p>Affordable Medical Education, Study At All Saints University, Study Medicine Abroad, Study Medicine in the Caribbean.</p>
+                                </div>
+                            </div>
+                        </div> <!-- row -->
+                    </div> <!-- singel news -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </section>
+    
+    <!--====== NEWS PART ENDS ======-->
+   
+    <!--====== PATNAR LOGO PART START ======-->
+    <hr>
+    <div id="patnar-logo" class="pt-40 pb-80 white-bg">
+        <div class="container">
+            <div class="row patnar-slied">
+                <div class="col-lg-12">
+                    <div class="singel-patnar text-center mt-40">
+                        <img src="https://allsaintsuniversity.org/wp-content/uploads/2023/05/1-3.png" alt="Logo">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="singel-patnar text-center mt-40">
+                        <img src="https://allsaintsuniversity.org/wp-content/uploads/2023/05/5-1.png" alt="Logo">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="singel-patnar text-center mt-40">
+                        <img src="https://allsaintsuniversity.org/wp-content/uploads/2023/05/4-2.png" alt="Logo">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="singel-patnar text-center mt-40">
+                        <img src="https://allsaintsuniversity.org/wp-content/uploads/2023/05/3-3.png" alt="Logo">
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="singel-patnar text-center mt-40">
+                        <img src="https://allsaintsuniversity.org/wp-content/uploads/2023/05/2-3.png" alt="Logo">
+                    </div>
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </div> 
+    
+    <!--====== PATNAR LOGO PART ENDS ======-->
+   
+    <!--====== FOOTER PART START ======-->
+    
+    <footer id="footer-part">
+        <div class="footer-top pt-40 pb-70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-about mt-40">
+                            <div class="logo">
+                                <a href="#"><img src="https://allsaintsuniversity.org/wp-content/uploads/2023/05/ALL_SAINTS_UNIVERSITY-removebg-preview.png" alt="Logo"></a>
+                            </div>
+                            <p>We don’t just give students an education and experiences that set them up for success in a career. We help them succeed in their career—to discover a field they’re passionate about and dare to lead it.</p>
+                            <ul class="mt-20">
+                                <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div> <!-- footer about -->
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer-link mt-40">
+                            <div class="footer-title pb-25">
+                                <h6>Sitemap</h6>
+                            </div>
+                            <ul>
+                                <li><a href="index.html"><i class="fa fa-angle-right"></i>Home</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>About us</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Admission</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Academics</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Financials</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Clinicals</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Apply</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Gallary</a></li>
+                            </ul>
+                        </div> <!-- footer link -->
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="footer-link support mt-40">
+                            <div class="footer-title pb-25">
+                                <h6>Support</h6>
+                            </div>
+                            <ul>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>FAQS</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Privacy</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Policy</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Support</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i>Documentation</a></li>
+                            </ul>
+                        </div> <!-- support -->
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-address mt-40">
+                            <div class="footer-title pb-25">
+                                <h6>Contact Us</h6>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fa fa-home"></i>
+                                    </div>
+                                    <div class="cont">
+                                        <p>Hillsborough Street Roseau, Commonwealth Of Dominica</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fa fa-phone"></i>
+                                    </div>
+                                    <div class="cont">
+                                        <p>1 866 602 9555</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon">
+                                        <i class="fa fa-envelope-o"></i>
+                                    </div>
+                                    <div class="cont">
+                                        <p>INFO@ALLSAINTSUNIVERSITY.ORG</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div> <!-- footer address -->
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- footer top -->
+        
+        <div class="footer-copyright pt-10 pb-25">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="copyright text-md-left text-center pt-15">
+                            <p><a target="_blank" href="https://www.templateshub.net">Templates Hub</a> </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="copyright text-md-right text-center pt-15">
+                           
+                        </div>
+                    </div>
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- footer copyright -->
+    </footer>
+    
+    <!--====== FOOTER PART ENDS ======-->
+   
+    <!--====== BACK TO TP PART START ======-->
+    
+    <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+    
+    <!--====== BACK TO TP PART ENDS ======-->
+   
+    
+    
+    
+    
+    
+    
+    
+    <!--====== jquery js ======-->
+    <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
 
-
+    <!--====== Bootstrap js ======-->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <!--====== Slick js ======-->
+    <script src="js/slick.min.js"></script>
+    
+    <!--====== Magnific Popup js ======-->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    
+    <!--====== Counter Up js ======-->
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    
+    <!--====== Nice Select js ======-->
+    <script src="js/jquery.nice-select.min.js"></script>
+    
+    <!--====== Nice Number js ======-->
+    <script src="js/jquery.nice-number.min.js"></script>
+    
+    <!--====== Count Down js ======-->
+    <script src="js/jquery.countdown.min.js"></script>
+    
+    <!--====== Validator js ======-->
+    <script src="js/validator.min.js"></script>
+    
+    <!--====== Ajax Contact js ======-->
+    <script src="js/ajax-contact.js"></script>
+    
+    <!--====== Main js ======-->
+    <script src="js/main.js"></script>
+    
+    <!--====== Map js ======-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDC3Ip9iVC0nIxC6V14CKLQ1HZNF_65qEQ"></script>
+    <script src="js/map-script.js"></script>
 
 </body>
 </html>
