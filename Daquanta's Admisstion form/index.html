@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Saints University</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+    <h1>Admission requirements</h1>
+ 
+    <h2>Detail About How To Apply</h2>
+    <p>If you are looking for an accredited and affordable medical university, All Saints University is the perfect place to start your journey towards becoming a medical professional. Our application process is simple and we carefully review each application, considering both academic achievements and personal qualities.</p>
+   
+    <p>Located in the heart of the city, our university offers a high-quality education that prepares our students for successful careers in medicine. At All Saints University, we are dedicated to changing the world for the better, and we believe that education is the key to achieving this goal. Apply now and begin your journey towards a rewarding and fulfilling career in medicine.</p>    
+ <form action="'index.php" method="post" enctype="multipart/form-data"></form>
+
+
+    <label for="username" method="post" >username:</label>
+    <input type="text" id="username" placeholder="allsaints" minlength="8" maxlength="25" required>
+     <label for="password" method="post" >password</label>
+     <input type="password" id="password" minlength="8" maxlength="25" required><br>
+    
+     <label for="email">email:</label>
+     <input type="email" id="email" placeholder="allsaints@gmail.com"><br>
+    
+     <label for="phone" >phone #:</label>
+     <input type="tel" id="phone" placeholder="773-678-6574" pattern="0-9{3}-[0-9]{3}-{0-9} {4}"><br>
+
+     <input type="reset" ><br>
+        <Input type="submit">   </label>
+
+      <label for="bday">bithdate</label>
+      <input type="date" id="bday"><br>
+
+      <label for="quantity">quantity</label>
+      <input type="number" id="qualitity" min="0" max="99" value="1"><br>
+
+      <label for="title">title:</label>
+    
+    <label for="Mr.">Mr.</label>
+   <input type="radio" id="Mr." value="Mr." name="title">
+    <label for="Ms.">Ms.</label>
+    <input type="radio" id="Ms." value="Ms." name="title">
+    <label for="PhD.">PhD.</label>
+    <input type="radio" id="Phd" value="PhD." name="title"><br>
+    </body>
+    <Label for="payment">payment</Label>
+    <select id="payment"></select>
+        <option value="visa">visa</option>
+        <option value="mastercard">Mastercard</option>
+        <option value="giftcard">Giftcard</option>
+
+        <label for="subcribe">subcribe</label>
+        <input type="checkbox" id="subcribe"><br>
+
+        <label for="comment">comment</label>
+        <textarea id="comment" rows="3" cols="25"
+></textarea>
+
+<label for="file">file</label>
+<input type="file" id="file" accept="image/png/jpeg"><br>
+</html>
