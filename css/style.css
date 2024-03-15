@@ -2223,7 +2223,7 @@ p {
     padding: 0;
 }
 .page-banner-cont .breadcrumb .breadcrumb-item {
-	color: #ffc600;
+	color: rgb(99, 166, 164);
 	font-size: 18px;
 	font-weight: 600;
 	margin-bottom: 2px;
@@ -2261,6 +2261,76 @@ p {
     font-size: 24px;
     padding-bottom: 25px;
 }
+
+
+/*=====================================================
+    APPLY PAGE css 
+======================================================*/
+.apply-image img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.apply-singel-items{}
+.apply-singel-items span{
+    font-size: 40px;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    line-height: 46px;
+    padding-bottom: 22px;
+    width: 100%;
+    /* text-align: center; */
+}
+
+.apply-singel-items h4:hover{
+    color: rgb(99, 166, 164);
+}
+
+.apply-singel-items h4{
+    color: #000;
+    font-size: 24px;
+    padding-bottom: 25px;
+    /* text-align: center; */
+}
+
+
+
+.apply-cont p{
+    font-size: 16px;
+    padding-top: 30px;
+}
+
+.section-title-apply {
+    font-size: 48px;
+    color: #000;
+
+}
+
+
+.admission-requirements{
+    color: white;
+    background-color: #092e56;
+    border: 1px solid black;
+    border-radius: 1%;
+}
+.admission-requirements button {
+    background-color: #315377;
+    border-color: #021d3a;;
+}
+.admission-requirements button:hover {
+    background-color: rgb(99, 166, 164);
+}
+
+.section-title-admission {
+    display: flex;
+    justify-content: center;
+    font-size: 48px;
+    color: #000;
+    text-align: center;
+
+}
+
 
 
 
