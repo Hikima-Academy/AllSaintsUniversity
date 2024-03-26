@@ -197,7 +197,7 @@
             </div>
             <hr>
 
-            <form action="#" class="form">
+            <form id="upload" class="form">
                 <div class="personal-information">
                     <h6>Please Enter your personal information:</h6>
 
@@ -223,11 +223,11 @@
                     <div class="term">
                         <label>Select A Term</label>
                         <div class="select-box">
-                            <select>
+                            <select required>
                                 <option hidden>TERM</option>
-                                <option>Summer (May - August 2024)</option>
-                                <option>Fall (September - December 2024)</option>
-                                <option>Winter (January - May 2025)</option>
+                                <option name="termOption">Summer (May - August 2024)</option>
+                                <option name="termOption">Fall (September - December 2024)</option>
+                                <option name="termOption">Winter (January - May 2025)</option>
                             </select>
                         </div>
                     </div>
@@ -235,12 +235,12 @@
                     <div class="column">
                         <div class="input-box">
                             <label>First Name</label>
-                            <input type="text" placeholder="Enter first name" required>
+                            <input type="text" placeholder="Enter first name" name="fname" required>
                         </div>
         
                         <div class="input-box">
                             <label>Last Name</label>
-                            <input type="text" placeholder="Enter last name" required>
+                            <input type="text" placeholder="Enter last name" name="lname" required>
                         </div>
                     </div>
 
@@ -248,23 +248,23 @@
                     <div class="column">
                         <div class="input-box">
                             <label>Email Address</label>
-                            <input type="text" placeholder="Enter email name" required>
+                            <input type="text" placeholder="Enter email name" name="email" required>
                         </div>
 
                         <div class="input-box">
                             <label>Home Phone number</label>
-                            <input type="tel" placeholder="Enter phone number" required>
+                            <input type="tel" placeholder="Enter phone number" name="homeNumber" required>
                         </div>
 
                         <div class="input-box">
                             <label>Mobile Phone number</label>
-                            <input type="tel" placeholder="Enter phone number">
+                            <input type="tel" placeholder="Enter phone number" name="mobileNumber">
                         </div>
                     </div>
 
                     <div class="input-box">
                         <label>Birth Date</label>
-                        <input type="date" placeholder="Enter birth date" required>
+                        <input type="date" placeholder="Enter birth date" name="bday" required>
                     </div>
 
                     <div class="gender-box">
@@ -289,13 +289,13 @@
 
                     <div class="input-box address">
                         <label>Address</label>
-                        <input type="text" placeholder="Enter street address" required>
-                        <input type="text" placeholder="Enter street address line 2">
+                        <input type="text" placeholder="Enter street address" name="streetAddress"required>
+                        <input type="text" placeholder="Enter street address line 2" name="streetAddress2">
 
                         <div class="column">
 
                             <div class="select-box">
-                                <select>
+                                <select name="country" required>
                                     <option hidden>Country</option>
                                     <option value="Afghanistan">Afghanistan</option>
                                     <option value="Åland Islands">Åland Islands</option>
@@ -543,12 +543,12 @@
                                     <option value="Zimbabwe">Zimbabwe</option>
                                 </select>
                             </div>
-                            <input type="text" placeholder="Enter your city" required>
+                            <input type="text" placeholder="Enter your city" name="city" required>
                         </div>
 
                         <div class="column">
-                            <input type="text" placeholder="State / Province / Region" required>
-                            <input type="text" placeholder="Enter postal code" required>
+                            <input type="text" placeholder="State / Province / Region" name="state-province-region" required>
+                            <input type="text" placeholder="Enter postal code" name="postal" required>
                         </div>
 
                     </div>
@@ -556,12 +556,12 @@
                     <div class="column">
                         <div class="input-box">
                             <label>Country of Citizenship</label>
-                            <input type="text" placeholder="Enter country of citizenship" required>
+                            <input type="text" placeholder="Enter country of citizenship" name="citizenship" required>
                         </div>
                         
                         <div class="input-box">
                             <label>VISA Status</label>
-                            <input type="text" placeholder="Enter VISA status" required>
+                            <input type="text" placeholder="Enter VISA status" name="visaStatus" required>
                         </div>
                     </div>
                 </div>
@@ -573,12 +573,12 @@
                     <div class="column">
                         <div class="input-box">
                             <label>First Name</label>
-                            <input type="text" placeholder="Enter first name" required>
+                            <input type="text" placeholder="Enter first name" name="fname2" required>
                         </div>
         
                         <div class="input-box">
                             <label>Last Name</label>
-                            <input type="text" placeholder="Enter last name" required>
+                            <input type="text" placeholder="Enter last name" name="lname2" required>
                         </div>
                     </div>
 
@@ -605,24 +605,24 @@
                     <div class="column">
                         <div class="input-box">
                             <label>Email Address</label>
-                            <input type="text" placeholder="Enter email name" required>
+                            <input type="text" placeholder="Enter email name" name="email2" required>
                         </div>
 
                         <div class="input-box">
                             <label>Phone number</label>
-                            <input type="tel" placeholder="Enter phone number" required>
+                            <input type="tel" placeholder="Enter phone number" name="sponsorNumber" required>
                         </div>
                     </div>
 
                     <div class="input-box address">
                         <label>Address</label>
-                        <input type="text" placeholder="Enter street address" required>
-                        <input type="text" placeholder="Enter street address line 2">
+                        <input type="text" placeholder="Enter street address" name="sponsorStreetAddress"required>
+                        <input type="text" placeholder="Enter street address line 2" name="sponsorStreetAddress2">
 
                         <div class="column">
 
                             <div class="select-box">
-                                <select>
+                                <select name="country2" required>
                                     <option hidden>Country</option>
                                     <option value="Afghanistan">Afghanistan</option>
                                     <option value="Åland Islands">Åland Islands</option>
@@ -870,12 +870,12 @@
                                     <option value="Zimbabwe">Zimbabwe</option>
                                 </select>
                             </div>
-                            <input type="text" placeholder="Enter your city" required>
+                            <input type="text" placeholder="Enter your city" name="city2"  required>
                         </div>
 
                         <div class="column">
-                            <input type="text" placeholder="State / Province / Region" required>
-                            <input type="text" placeholder="Enter postal code" required>
+                            <input type="text" placeholder="State / Province / Region" name="state-province-region2"required>
+                            <input type="text" placeholder="Enter postal code" name="postal2" required>
                         </div>
 
                     </div>
@@ -888,12 +888,12 @@
                     <div class="column">
                         <div class="input-box">
                             <label>Date From</label>
-                            <input type="date" placeholder="Enter date" required>
+                            <input type="date" placeholder="Enter date" name="dateFrom" required>
                         </div>
 
                         <div class="input-box">
                             <label>Date To</label>
-                            <input type="date" placeholder="Enter date" required>
+                            <input type="date" placeholder="Enter date" name="dateTo" required>
                         </div>
 
                     </div>
@@ -901,26 +901,26 @@
                     <div class="column">
                         <div class="input-box">
                             <label>Institution</label>
-                            <input type="text" placeholder="Enter institution name" required>
+                            <input type="text" placeholder="Enter institution name" name="institution" required>
                         </div>
 
                         <div class="input-box">
                             <label>Degree</label>
-                            <input type="text" placeholder="Enter degree" required>
+                            <input type="text" placeholder="Enter degree" name="degree" required>
                         </div>
 
                         <div class="input-box">
                             <label>City, Country</label>
-                            <input type="text" placeholder="Enter city and country" required>
+                            <input type="text" placeholder="Enter city and country" name="city-country" required>
                         </div>
                     </div>
                     <div class="checkbox-container">
-                        <input type="checkbox" id="add-school" name="gender">
+                        <input type="checkbox" id="add-school" name="addSchool">
                         <label for="add-school">Add More Schools</label>
                     </div>
 
                     <div class="checkbox-container">
-                        <input type="checkbox" id="add-school" name="gender">
+                        <input type="checkbox" id="add-school" name="GED">
                         <label for="add-school">Check here if you completed the GED instead of graduating from high school.</label>
                     </div>
                 </div>
@@ -1014,7 +1014,7 @@
 
                     <div class="personal-statement-text">
                         <label>Personal Statement</label>
-                        <textarea name="" id="" cols="30" rows="5"></textarea>
+                        <textarea name="personalStatement" id="" cols="30" rows="5"></textarea>
                     </div>
 
                 </div>
@@ -1026,10 +1026,10 @@
 
                     <div class="attach-file">
                         <label for="file">Attach a File</label>
-                        <input type="file" id="file" accept="image/*,.pdf,.doc,.docx,.xml">
+                        <input type="file" id="file" name="requiredDocuments" accept="image/*,.pdf,.doc,.docx,.xml">
                     </div>
                 </div>
-
+ 
                 <hr>
                 <div class="hear-about-asu">
                     <h6>Where did you hear about ASU?</h6>
@@ -1091,7 +1091,7 @@
 
                     <div class="input-box">
                         <label>Please describe</label>
-                        <input type="text" placeholder="Enter your source">
+                        <input type="text" name="source" placeholder="Enter your source">
                     </div>
 
                 </div>
@@ -1102,30 +1102,30 @@
                 <div class="column">
                     <div class="input-box">
                         <label>Personal Savings (number from 0% to 100% only)</label>
-                        <input type="text" placeholder="Place a number between 0 and 100" required>
+                        <input type="text" placeholder="Place a number between 0 and 100" name="personalSavings" required>
                     </div>
 
                     <div class="input-box">
                         <label>Federal Govt. Loans (number from 0% to 100% only)</label>
-                        <input type="text" placeholder="Place a number between 0 and 100" required>
+                        <input type="text" placeholder="Place a number between 0 and 100" name="govtLoans" required>
                     </div>
                 </div>
 
                 <div class="column">
                     <div class="input-box">
                         <label>Family/Parental Support (number from 0% to 100% only)</label>
-                        <input type="text" placeholder="Place a number between 0 and 100" required>
+                        <input type="text" placeholder="Place a number between 0 and 100" name="familySupport" required>
                     </div>
 
                     <div class="input-box">
                         <label>Private Loans (number from 0% to 100% only)</label>
-                        <input type="text" placeholder="Place a number between 0 and 100" required>
+                        <input type="text" placeholder="Place a number between 0 and 100" name="privateLoans" required>
                     </div>
                 </div>
 
                 <div class="input-box">
                     <label>Other Sources (number from 0% to 100% only)</label>
-                    <input type="text" placeholder="Place a number between 0 and 100" required>
+                    <input type="text" placeholder="Place a number between 0 and 100" name="otherFinance" required>
                 </div>
 
 
@@ -1142,7 +1142,7 @@
                         <label class="select-choice">Select A Choice</label>
                         <div class="choice-box">
                                 <div class="choice">
-                                    <input type="radio" id="check-yes" name="choice">
+                                    <input type="radio" id="check-yes" name="choice" required>
                                     <label for="check-yes">Yes</label>
                                 </div>
         
@@ -1156,12 +1156,12 @@
                     <div class="column">
                         <div class="input-box">
                             <label>Signature</label>
-                            <input type="text" placeholder="Enter Signature" required>
+                            <input type="text" placeholder="Enter Signature" name="signature" required>
                         </div>
 
                         <div class="input-box">
                             <label>Date Signed</label>
-                            <input type="date" required>
+                            <input type="date" name="dateSigned" required>
                         </div>
                     </div>
 
@@ -1169,7 +1169,7 @@
 
 
 
-                <button>Submit</button>
+                <button class="submit">Submit</button>
             </form>
         </div>
     </section>
@@ -1305,6 +1305,7 @@
     
     
     <!--====== jquery js ======-->
+    <script src="js/form.js"></script>
     <script src="js/vendor/modernizr-3.6.0.min.js"></script>
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
 

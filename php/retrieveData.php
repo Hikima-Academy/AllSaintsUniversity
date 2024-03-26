@@ -5,7 +5,7 @@ header('Access-Control-Allow-Origin: *');
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "dbname";
+$dbname = "allsaintsuniversity";
 
 // Create a new MySQLi object
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -16,7 +16,7 @@ if ($conn->connect_error) {
 }
 
 // Construct the SQL query
-$sql = "SELECT * FROM crudTest";
+$sql = "SELECT * FROM application";
 
 // Execute the query and retrieve the result set
 $result = $conn->query($sql);
