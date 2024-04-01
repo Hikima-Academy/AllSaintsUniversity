@@ -145,6 +145,13 @@
                             </div>
                         </nav> <!-- nav -->
                     </div>
+                    <div class="col-lg-2 col-md-2 col-sm-3 col-4">
+                        <div class="right-icon text-right">
+                            <ul>
+                                <li><a href="login.html"><i class="fa fa-user"></i></a></li>
+                            </ul>
+                        </div> <!-- right icon -->
+                    </div>
 
                 </div> <!-- row -->
             </div> <!-- container -->
@@ -188,6 +195,7 @@
    
     <!--====== APPLICATION FORM PART START ======-->
     
+    
     <section class="application-form-container">
         <div class="inner-application-form-container">
             <header class="application-form-header">Application Form</header>
@@ -197,7 +205,7 @@
             </div>
             <hr>
 
-            <form id="upload" class="form">
+            <form id="upload" action="addData.php" class="form">
                 <div class="personal-information">
                     <h6>Please Enter your personal information:</h6>
 
@@ -205,17 +213,17 @@
                         <h3>Program of Enrollment</h3>
                         <div class="program-option">
                             <div class="program">
-                                <input type="radio" id="check-4-Year-MD" name="program" checked>
+                                <input type="radio" id="check-4-Year-MD" name="program" value="4-Year MD" checked>
                                 <label for="check-4-Year-MD">4-Year MD</label>
                             </div>
 
                             <div class="program">
-                                <input type="radio" id="check-5-Year-MD" name="program">
+                                <input type="radio" id="check-5-Year-MD" name="program" value="5-Year MD">
                                 <label for="check-5-Year-MD">5-Year MD</label>
                             </div>
 
                             <div class="program">
-                                <input type="radio" id="check-Nursing" name="program">
+                                <input type="radio" id="check-Nursing" name="program" value="B.S Nursing (BScn)">
                                 <label for="check-Nursing">B.S. Nursing (BScN)</label>
                             </div>
                         </div>
@@ -223,11 +231,11 @@
                     <div class="term">
                         <label>Select A Term</label>
                         <div class="select-box">
-                            <select required>
+                            <select name="termOption" required>
                                 <option hidden>TERM</option>
-                                <option name="termOption">Summer (May - August 2024)</option>
-                                <option name="termOption">Fall (September - December 2024)</option>
-                                <option name="termOption">Winter (January - May 2025)</option>
+                                <option  value="Summer (May - August 2024)">Summer (May - August 2024)</option>
+                                <option  value="Fall (September - December 2024)">Fall (September - December 2024)</option>
+                                <option  value="Winter (January - May 2025)">Winter (January - May 2025)</option>
                             </select>
                         </div>
                     </div>
@@ -271,25 +279,25 @@
                         <h3>Gender</h3>
                         <div class="gender-option">
                             <div class="gender">
-                                <input type="radio" id="check-male" name="gender" checked>
+                                <input type="radio" id="check-male" name="gender" value="Male" checked>
                                 <label for="check-male">Male</label>
                             </div>
 
                             <div class="gender">
-                                <input type="radio" id="check-female" name="gender">
+                                <input type="radio" id="check-female" name="gender" value="Female">
                                 <label for="check-female">Female</label>
                             </div>
 
                             <div class="gender">
-                                <input type="radio" id="check-other" name="gender">
-                                <label for="check-other">Prefer not to say</label>
+                                <input type="radio" id="check-other" name="gender" value="Other">
+                                <label for="check-other">Other</label>
                             </div>
                         </div>
                     </div>
 
                     <div class="input-box address">
                         <label>Address</label>
-                        <input type="text" placeholder="Enter street address" name="streetAddress"required>
+                        <input type="text" placeholder="Enter street address" name="streetAddress">
                         <input type="text" placeholder="Enter street address line 2" name="streetAddress2">
 
                         <div class="column">
@@ -586,18 +594,18 @@
                         <h3>Gender</h3>
                         <div class="gender-option1">
                             <div class="gender1">
-                                <input type="radio" id="check-male1" name="gender1" checked>
+                                <input type="radio" id="check-male1" name="gender1" value="Male" checked>
                                 <label for="check-male1">Male</label>
                             </div>
 
                             <div class="gender1">
-                                <input type="radio" id="check-female1" name="gender1">
+                                <input type="radio" id="check-female1" name="gender1" value="Female">
                                 <label for="check-female1">Female</label>
                             </div>
 
                             <div class="gender1">
-                                <input type="radio" id="check-other1" name="gender1">
-                                <label for="check-other1">Prefer not to say</label>
+                                <input type="radio" id="check-other1" name="gender1" value="Other">
+                                <label for="check-other1">Other</label>
                             </div>
                         </div>
                     </div>
@@ -920,7 +928,7 @@
                     </div>
 
                     <div class="checkbox-container">
-                        <input type="checkbox" id="add-school" name="GED">
+                        <input type="checkbox" id="add-school" name="GED" value="Yes">
                         <label for="add-school">Check here if you completed the GED instead of graduating from high school.</label>
                     </div>
                 </div>
@@ -932,12 +940,12 @@
                         <label class="select-choice1">Are you currently enrolled in a College or University?</label>
                         <div class="choice-box1">
                                 <div class="choice1">
-                                    <input type="radio" id="check-yes1" name="choice1">
+                                    <input type="radio" id="check-yes1" name="choice1" value="Yes">
                                     <label for="check-yes-1">Yes</label>
                                 </div>
         
                                 <div class="choice1">
-                                    <input type="radio" id="check-no1" name="choice1"  checked>
+                                    <input type="radio" id="check-no1" name="choice1"  checked value="No">
                                     <label for="check-no1">No</label>
                                 </div>
                         </div>
@@ -947,12 +955,12 @@
                         <label class="select-choice2">Are you a transfer student?</label>
                         <div class="choice-box2">
                                 <div class="choice2">
-                                    <input type="radio" id="check-yes2" name="choice2">
+                                    <input type="radio" id="check-yes2" name="choice2" value="Yes">
                                     <label for="check-yes-2">Yes</label>
                                 </div>
         
                                 <div class="choice2">
-                                    <input type="radio" id="check-no2" name="choice2" checked>
+                                    <input type="radio" id="check-no2" name="choice2" checked value="No">
                                     <label for="check-no2">No</label>
                                 </div>
                         </div>
@@ -962,12 +970,12 @@
                         <label class="select-choice3">Have you ever been withdrawn from an institution?</label>
                         <div class="choice-box3">
                                 <div class="choice3">
-                                    <input type="radio" id="check-yes3" name="choice3">
+                                    <input type="radio" id="check-yes3" name="choice3" value="Yes">
                                     <label for="check-yes-3">Yes</label>
                                 </div>
         
                                 <div class="choice3">
-                                    <input type="radio" id="check-no3" name="choice3" checked>
+                                    <input type="radio" id="check-no3" name="choice3" checked value="No">
                                     <label for="check-no3">No</label>
                                 </div>
                         </div>
@@ -977,12 +985,12 @@
                         <label class="select-choice4">Have you ever been arrested or convicted?</label>
                         <div class="choice-box4">
                                 <div class="choice4">
-                                    <input type="radio" id="check-yes4" name="choice4">
+                                    <input type="radio" id="check-yes4" name="choice4" value="Yes">
                                     <label for="check-yes-4">Yes</label>
                                 </div>
         
                                 <div class="choice4">
-                                    <input type="radio" id="check-no4" name="choice4" checked>
+                                    <input type="radio" id="check-no4" name="choice4" checked value="No">
                                     <label for="check-no4">No</label>
                                 </div>
                         </div>
@@ -992,12 +1000,12 @@
                         <label class="select-choice5">Have you ever been treated for substance abuse?</label>
                         <div class="choice-box5">
                                 <div class="choice5">
-                                    <input type="radio" id="check-yes5" name="choice5">
+                                    <input type="radio" id="check-yes5" name="choice5" value="Yes">
                                     <label for="check-yes-5">Yes</label>
                                 </div>
         
                                 <div class="choice5">
-                                    <input type="radio" id="check-no5" name="choice5" checked>
+                                    <input type="radio" id="check-no5" name="choice5" checked value="No">
                                     <label for="check-no5">No</label>
                                 </div>
                         </div>
@@ -1036,54 +1044,54 @@
                     <div class="hear-about-asu-box">
                         <div class="hear-about-asu-option-left">
                             <div class="source">
-                                <input type="radio" id="check-facebook" name="source" checked>
+                                <input type="radio" id="check-facebook" name="source" value="Facebook" checked>
                                 <label for="check-facebook">Facebook</label>
                             </div>
     
                             <div class="source">
-                                <input type="radio" id="check-twitter" name="source">
-                                <label for="check-twitter">Twitter</label>
+                                <input type="radio" id="check-twitter" name="source" value="X">
+                                <label for="check-twitter">X</label>
                             </div>
     
                             <div class="source">
-                                <input type="radio" id="check-google" name="source">
+                                <input type="radio" id="check-google" name="source" value="Google">
                                 <label for="check-google">Google</label>
                             </div>
 
                             <div class="source">
-                                <input type="radio" id="check-spotify" name="source">
+                                <input type="radio" id="check-spotify" name="source" value="Spotify">
                                 <label for="check-spotify">Spotify</label>
                             </div>
 
                             <div class="source">
-                                <input type="radio" id="check-referral" name="source">
+                                <input type="radio" id="check-referral" name="source" value="Referral">
                                 <label for="check-referral">Referral</label>
                             </div>
                         </div>
 
                         <div class="hear-about-asu-option-right">
                             <div class="source">
-                                <input type="radio" id="check-instagram" name="source">
+                                <input type="radio" id="check-instagram" name="source" value="Instagram">
                                 <label for="check-instagram">Instagram</label>
                             </div>
 
                             <div class="source">
-                                <input type="radio" id="check-word-of-mouth" name="source">
+                                <input type="radio" id="check-word-of-mouth" name="source" value="Word of Mouth">
                                 <label for="check-word-of-mouth">Word of Mouth</label>
                             </div>
 
                             <div class="source">
-                                <input type="radio" id="check-tiktok" name="source">
+                                <input type="radio" id="check-tiktok" name="source" value="TikTok">
                                 <label for="check-tiktok">TikTok</label>
                             </div>
 
                             <div class="source">
-                                <input type="radio" id="check-reddit" name="source">
+                                <input type="radio" id="check-reddit" name="source" value="Reddit">
                                 <label for="check-reddit">Reddit</label>
                             </div>
 
                             <div class="source">
-                                <input type="radio" id="check-other" name="source">
+                                <input type="radio" id="check-other" name="source" value="Other">
                                 <label for="check-other">Other</label>
                             </div>
                         </div>
@@ -1142,12 +1150,12 @@
                         <label class="select-choice">Select A Choice</label>
                         <div class="choice-box">
                                 <div class="choice">
-                                    <input type="radio" id="check-yes" name="choice" required>
+                                    <input type="radio" id="check-yes" name="choice" value="Yes" required>
                                     <label for="check-yes">Yes</label>
                                 </div>
         
                                 <div class="choice">
-                                    <input type="radio" id="check-no" name="choice">
+                                    <input type="radio" id="check-no" name="choice" value="No">
                                     <label for="check-no">No</label>
                                 </div>
                         </div>
@@ -1169,7 +1177,8 @@
 
 
 
-                <button class="submit">Submit</button>
+                <!-- <button class="submit">Submit</button> -->
+                <input type="submit" name="submit">
             </form>
         </div>
     </section>

@@ -1,6 +1,9 @@
-form {border: 3px solid #f1f1f1;}
+.loginForm {
+  border: 3px solid #f1f1f1;
+  margin-bottom: 100px;
+}
  
-input[type=text], input[type=password] {
+.loginForm input[type=text], .loginForm input[type=password] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -9,8 +12,8 @@ input[type=text], input[type=password] {
   box-sizing: border-box;
 }
  
-button {
-  background-color: #04AA6D;
+.loginButton {
+  background-color: rgb(99, 166, 164);
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -19,8 +22,8 @@ button {
   width: 100%;
 }
  
-button:hover {
-  opacity: 0.8;
+.loginButton:hover {
+  background-color: #092e56;
 }
  
 .cancelbtn {
@@ -29,17 +32,9 @@ button:hover {
   background-color: #f44336;
 }
  
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-}
+
  
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
- 
-.container {
+.cancelBtnContainer {
   padding: 16px;
 }
  
