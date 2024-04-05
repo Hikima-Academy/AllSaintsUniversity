@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    min-height: 100vh;
+    background-color: #f1f1f1;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+ 
+h2 {
+    color: #444;
+}
+
+.btn {
+    background: #092e56;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+}
+.btn:hover {
+    color: white;
+    background: rgb(99, 166, 164);
+    padding: 3px 8px;
+    border: 2px solid #092e56;
+}
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 50px;
+}
+table {
+    padding: 10px;
+    border-bottom: 2px solid #999;
+    border-top: 2px solid #999;
+}
+th,
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+
+td {
+    border-bottom: 2px solid #999;
+    border-right: 2px solid #999;
+}
+
+.container {
+    position: absolute;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #f1f1f1;
+}
+
+.container .content {
+    position: relative;
+    min-height: 90vh;
+    background: #f1f1f1;
+}
+
+.container .content .content-2 {
+    min-height: 60vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.container .content .content-2 .applications {
+    min-height: 50vh;
+    flex: 5;
+    background: white;
+    margin: 25px 25px 25px 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+    overflow-x: scroll;
+}
+
+@media screen and (max-width:536px) {
+    .container .content .content-2 .applications table th:nth-child(2),
+    .container .content .content-2 .applications table td:nth-child(2) {
+        display: none;
+    }
+}

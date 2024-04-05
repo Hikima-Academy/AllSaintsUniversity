@@ -18,7 +18,7 @@ if ($conn->connect_error) {
 }
 
 // Prepare the SQL query
-$sql = "SELECT serialNumber, firstName, lastName, Program AS program, Email AS email, homePhone, Term AS term FROM register ORDER BY serialNumber ASC LIMIT 8";
+$sql = "SELECT * FROM register";
 
 
 // Execute the query

@@ -39,8 +39,8 @@ h3 {
 .title {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding: 15px 10px;
+    justify-content: space-between;
+    padding: 15px 50px;
     border-bottom: 2px solid #999;
 }
 table {
@@ -172,11 +172,11 @@ td {
 .container .content .content-2 {
     min-height: 60vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
 }
-.container .content .content-2 .recent-payments {
+.container .content .content-2 .applications {
     min-height: 50vh;
     flex: 5;
     background: white;
@@ -231,8 +231,8 @@ td {
         width: 30px;
         height: 30px;
     }
-    .container .content .content-2 .recent-payments table th:nth-child(2),
-    .container .content .content-2 .recent-payments table td:nth-child(2) {
+    .container .content .content-2 .applications table th:nth-child(2),
+    .container .content .content-2 .applications table td:nth-child(2) {
         display: none;
     }
 }

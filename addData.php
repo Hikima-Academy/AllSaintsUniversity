@@ -1,15 +1,3 @@
-<!-- 
-
-  // Execute the query
-  if ($connection->query($sql) === TRUE) {
-    http_response_code(200);
-    echo "<script> alert('Data added succesffuly')   </script>";
-    // echo 'Data added successfully';
-  } else {
-    http_response_code(500);
-    echo 'Error adding data: ' . $connection->error;
-  } -->
-
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
