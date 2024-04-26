@@ -1,32 +1,51 @@
-console.log("hello");
-document.addEventListener('DOMContentLoaded', function() {
-    fetch('retrieveData.php') // Adjust the URL to your PHP script
+document.addEventListener('DOMContentLoaded', function () {
+    fetch('retrieveData.php')
+        .then(response => response.json())  // Directly parse JSON
+        .then(data => {
+            const table = document.getElementById("data-container");
+            table.innerHTML = ''; // Clear existing data
+
+            data.forEach(function (item) {
+                let row = document.createElement("tr");
+                let serialNumberCell = document.createElement("td");
+                let firstNameCell = document.createElement("td");
+                let lastNameCell = document.createElement("td");
+                let programCell = document.createElement("td");
+                let emailCell = document.createElement("td");
+                let homePhoneCell = document.createElement("td");
+                let termCell = document.createElement("td");
+                let optionCell = document.createElement("td");
+
+                serialNumberCell.textContent = item.serialNumber;
+                firstNameCell.textContent = item.firstName;
+                lastNameCell.textContent = item.lastName;
+                programCell.textContent = item.program;
+                emailCell.textContent = item.email;
+                homePhoneCell.textContent = item.homePhone;
+                termCell.textContent = item.term;
+                optionCell.innerHTML = `<a href="viewedApplication.html?id=${item.serialNumber}" class="btn">View</a>`;
+
+                row.appendChild(serialNumberCell);
+                row.appendChild(firstNameCell);
+                row.appendChild(lastNameCell);
+                row.appendChild(programCell);
+                row.appendChild(emailCell);
+                row.appendChild(homePhoneCell);
+                row.appendChild(termCell);
+                row.appendChild(optionCell);
+
+                table.appendChild(row); // Append the new row to the table
+            });
+        })
+        .catch(error => console.error('Error fetching data:', error));
+});
+
+fetch('applicantCount.php')  // Adjust this path to where your PHP script is hosted
     .then(response => response.json())
     .then(data => {
-        const tableBody = document.getElementById('data-container');
-        data.forEach(item => {
-            const row = tableBody.insertRow();
-            
-            // Corrected to match the JSON keys exactly as they are expected to be
-            const serialNumberCell = row.insertCell(0);
-            const firstNameCell = row.insertCell(1);
-            const lastNameCell = row.insertCell(2);
-            const programCell = row.insertCell(3);
-            const emailCell = row.insertCell(4);
-            const homePhoneCell = row.insertCell(5);
-            const termCell = row.insertCell(6);
-            const optionCell = row.insertCell(7);
-
-            serialNumberCell.innerHTML = item.serialNumber; // Correct case
-            firstNameCell.innerHTML = item.firstName; // Correct case
-            lastNameCell.innerHTML = item.lastName; // Correct case
-            programCell.innerHTML = item.program; // Assuming this should be lowercase
-            emailCell.innerHTML = item.email; // Assuming this should be lowercase
-            homePhoneCell.innerHTML = item.homePhone; // Correct case
-            termCell.innerHTML = item.term; // Assuming this should be lowercase
-            optionCell.innerHTML = `<a href="#" class="btn">View</a>`; // Assuming every row has a view button
-            
-        });
+        document.getElementById('countAll').textContent = data.allApplicants;
+        document.getElementById('count4Year').textContent = data.fourYearMD;
+        document.getElementById('count5Year').textContent = data.fiveYearMD;
+        document.getElementById('nursing').textContent = data.nursing;
     })
     .catch(error => console.error('Error fetching data:', error));
-});

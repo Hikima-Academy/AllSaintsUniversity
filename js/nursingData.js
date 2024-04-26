@@ -1,7 +1,7 @@
 console.log("hello");
 
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('retrieveData2.php')
+    fetch('retrieveNursing.php')
         .then(response => response.text())  // First convert to text to see what's coming
         .then(text => {
             try {

@@ -2578,6 +2578,36 @@ p {
     }
   }
 
+/*=====================================================
+     Application Message css 
+======================================================*/
+
+  .application-message {
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:20px;
+    background-color: #edf0f2;
+    text-align: center;
+}
+
+.application-message-inner {
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    /* background: #fff; */
+    padding: 25px;
+}
+
+.application-message-inner img {
+    padding-bottom: 40px;
+}
+
+.how-to-apply-inner p {
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
 
 /*=====================================================
      Login Form css 
