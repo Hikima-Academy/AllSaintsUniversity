@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 let AknowledgementCell = document.createElement("td");
                 let applicantSignatureCell = document.createElement("td");
                 let dateSignedCell = document.createElement("td");
-                let optionCell = document.createElement("td");
+                // let optionCell = document.createElement("td");
 
 
 
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-                optionCell.innerHTML = `<a href="viewedApplication.html?id=${item.serialNumber}" class="btn">View</a>`; // Assuming every row has a view button
+                // optionCell.innerHTML = `<a href="viewedApplication.html?id=${item.serialNumber}" class="btn">View</a>`; // Assuming every row has a view button
 
                 row.appendChild(serialNumberCell);
                 row.appendChild(dateTimeCell);
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 row.appendChild(AknowledgementCell);
                 row.appendChild(applicantSignatureCell);
                 row.appendChild(dateSignedCell);
-                row.appendChild(optionCell);
+                // row.appendChild(optionCell);
 
                 table.appendChild(row); // Append the new row to the table
             });

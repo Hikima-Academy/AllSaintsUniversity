@@ -1,25 +1,28 @@
 <?php
 
-
-// Cloudinary configuration
-\Cloudinary::config(array( 
-  "cloud_name" => "dskjrpxtt", 
-  "api_key" => "766581443822748", 
-  "api_secret" => "_wq_ptfCbZtaTx1PV8n9fR-b9BE" 
-));
-
-
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 header('Access-Control-Allow-Origin: *');
 
 
+// require 'vendor/autoload.php'; // Make sure to include the Composer autoload file
+// use Cloudinary\Api\Upload\UploadApi;
+// // Configure Cloudinary with your credentials
+// \Cloudinary::config(array( 
+//     "cloud_name" => "dskjrpxtt", 
+//     "api_key" => "766581443822748", 
+//     "api_secret" => "_wq_ptfCbZtaTx1PV8n9fR-b9BE",
+//     "secure" => true
+// ));
+
+// // Upload an image to Cloudinary
+// $reqDoc = $_POST['requiredDocuments'];
+// //  \Cloudinary\Uploader::upload("/path/to/your/image.jpg");
+// (new UploadApi())->upload($reqDoc);
 
 
 
-$reqDoc = $_POST["requiredDocuments"];
 
-$imageLink = uploadToCloudinary($reqDoc);
 
 $data = json_encode(
   array(
@@ -63,7 +66,7 @@ $data = json_encode(
     "arrestedStatus" => $_POST['choice4'],
     "substanceAbuse" => $_POST['choice5'],
     "personalStatement" => $_POST['personalStatement'],
-    $imageLink,
+    // "reqDoc" => $_FILES['requiredDocuments'], // use cloudinary
     "heardFrom" => $_POST['source'],
     "personalSavings" => $_POST['personalSavings'],
     "governmentLoans" => $_POST['govtLoans'],
@@ -86,18 +89,19 @@ $dbname = 'AllSaintsDatabase';
 // Create database connection 
 $conn = new mysqli($host, $username, $password, $dbname);
 
-
 // Check connection
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
 
-function uploadToCloudinary($file) {
-  $result = \Cloudinary\Uploader::upload($file["tmp_name"]);
-  return $result["secure_url"];
-}
 
+
+// Prepare insert statement 
+// $sql = "INSERT INTO application (firstName,	lastName,	Email, homePhone,	mobilePhone,	Term,	Program,	birthDate,	Gender,	streetAddress,	streetAddress2,	Country,	City,	stateProvinceRegion,	postalCode,	Citizenship,	visaStatus,	sponsorFirstName,	sponsorLastName,	sponsorGender,	sponsorEmail,	sponsorPhone,	sponsorStreetAddress,	sponsorStreetAddress2,	sponsorCountry,	sponsorCity,	sponsorState,	sponsorPostal,	Institution,	institutionDateFrom,	institutionDateTo,	Degree,	institutionCityCountry,	GED,	currentlyEnrolled,	transferStudent,	withdrawnStatus,	arrestedStatus,	substanceAbuse,	personalStatement,	heardFrom,	personalSavings,	governmentLoans,	familySupport,	privateLoans,	otherFinance,	Aknowledgement,	applicantSignature,	dateSigned) VALUES ('$firstName',	'$lastName',	'$Email',	'$homePhone',	'$mobilePhone',	'$Term',	'$Program',	'$birthDate',	'$Gender',	'$streetAddress',	'$streetAddress2',	'$Country',	'$City',	'$stateProvinceRegion',	'$postalCode',	'$Citizenship',	'$visaStatus',	'$sponsorFirstName',	'$sponsorLastName',	'$sponsorGender',	'$sponsorEmail',	'$sponsorPhone',	'$sponsorStreetAddress',	'$sponsorStreetAddress2',	'$sponsorCountry',	'$sponsorCity',	'$sponsorState',	'$sponsorPostal',	'$Institution',	'$institutionDateFrom',	'$institutionDateTo',	'$Degree',	'$institutionCityCountry',	'$GED',	'$currentlyEnrolled',	'$transferStudent',	'$withdrawnStatus',	'$arrestedStatus',	'$substanceAbuse',	'$personalStatement',	'$heardFrom',	'$personalSavings',	'$governmentLoans',	'$familySupport',	'$privateLoans',	'$otherFinance',	'$Aknowledgement',	'$applicantSignature',	'$dateSigned')";
+
+
+// $sql = "INSERT INTO register (firstName,	lastName,	Email, homePhone,	mobilePhone,	Term,	Program,	birthDate,	Gender,	streetAddress, streetAddress2, Country, City,	stateProvinceRegion,	postalCode,	Citizenship,	visaStatus,	sponsorFirstName,	sponsorLastName,	sponsorGender,	sponsorEmail,	sponsorPhone,	sponsorStreetAddress,	sponsorStreetAddress2,	sponsorCountry,	sponsorCity,	sponsorState,	sponsorPostal,	Institution,	institutionDateFrom,	institutionDateTo) VALUES ('$firstName',	'$lastName',	'$Email',	'$homePhone',	'$mobilePhone',	'$Term',	'$Program',	'$birthDate',	'$Gender',	'$streetAddress', '$streetAddress2', '$Country', '$City', '$stateProvinceRegion', '$postalCode', '$Citizenship', '$visaStatus', '$sponsorFirstName',	'$sponsorLastName',	'$sponsorGender',	'$sponsorEmail',	'$sponsorPhone',	'$sponsorStreetAddress',	'$sponsorStreetAddress2',	'$sponsorCountry',	'$sponsorCity',	'$sponsorState',	'$sponsorPostal',	'$Institution',	'$institutionDateFrom',	'$institutionDateTo')";
 
 
 $sql = "INSERT INTO register (data) VALUES (?)";
@@ -118,13 +122,3 @@ $stmt->close();
 $conn->close();
 
 ?>
-
-
-
-
-
-
-
-
-
-
