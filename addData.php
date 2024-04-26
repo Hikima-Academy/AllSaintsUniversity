@@ -1,5 +1,14 @@
 <?php
 
+
+// Cloudinary configuration
+\Cloudinary::config(array( 
+  "cloud_name" => "dskjrpxtt", 
+  "api_key" => "766581443822748", 
+  "api_secret" => "_wq_ptfCbZtaTx1PV8n9fR-b9BE" 
+));
+
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 header('Access-Control-Allow-Origin: *');
@@ -8,7 +17,9 @@ header('Access-Control-Allow-Origin: *');
 
 
 
+$reqDoc = $_POST["requiredDocuments"];
 
+$imageLink = uploadToCloudinary($reqDoc);
 
 $data = json_encode(
   array(
@@ -52,7 +63,7 @@ $data = json_encode(
     "arrestedStatus" => $_POST['choice4'],
     "substanceAbuse" => $_POST['choice5'],
     "personalStatement" => $_POST['personalStatement'],
-    // "reqDoc" => $_FILES['requiredDocuments'], // use cloudinary
+    $imageLink,
     "heardFrom" => $_POST['source'],
     "personalSavings" => $_POST['personalSavings'],
     "governmentLoans" => $_POST['govtLoans'],
@@ -75,11 +86,17 @@ $dbname = 'AllSaintsDatabase';
 // Create database connection 
 $conn = new mysqli($host, $username, $password, $dbname);
 
+
 // Check connection
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
+
+function uploadToCloudinary($file) {
+  $result = \Cloudinary\Uploader::upload($file["tmp_name"]);
+  return $result["secure_url"];
+}
 
 
 
@@ -101,11 +118,6 @@ $stmt->close();
 $conn->close();
 
 ?>
-
-
-
-
-
 
 
 
