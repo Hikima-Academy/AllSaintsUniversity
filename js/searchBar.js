@@ -36,7 +36,7 @@ document.getElementById('nameSearchBtn').addEventListener('click', function () {
                         optionCell.innerHTML = `<a href="viewedApplication.html?id=${item.serialNumber}" class="btn">View</a>`;
 
                         row.append(serialNumberCell, firstNameCell, lastNameCell, programCell, emailCell, homePhoneCell, termCell, optionCell);
-                        table.appendChild(row);
+                        tableBody.appendChild(row);
                     });
                 })
                 .catch(error => console.error('Error fetching data:', error));

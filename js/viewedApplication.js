@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 data.forEach(function (item) {
                     let parsedData = JSON.parse(item.data); // Parsing the nested JSON string
-                    document.getElementById('applicationTitle').textContent = `${parsedData.firstName}'s Application`; // Updates the title dynamically
+                    document.getElementById('applicationTitle').textContent = `${parsedData.firstName} ${parsedData.lastName}'s Application`; // Updates the title dynamically
 
                     // Function to create and append row elements
                     function addRow(name, value) {
