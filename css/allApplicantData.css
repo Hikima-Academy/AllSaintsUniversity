@@ -47,6 +47,10 @@ td {
     text-align: center;
     padding: 8px;
 }
+th {
+    background-color: #496D89;
+    color: white;
+}
 
 
 td {

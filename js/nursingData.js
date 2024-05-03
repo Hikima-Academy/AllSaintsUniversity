@@ -109,7 +109,18 @@ document.addEventListener('DOMContentLoaded', function () {
                     arrestedStatusCell.textContent = `${parsedData.arrestedStatus}`;
                     substanceAbuseCell.textContent = `${parsedData.substanceAbuse}`;
                     personalStatementCell.textContent = `${parsedData.personalStatement}`;
-                    requiredDocCell.innerHTML = `<a href="https://cloudinary.com/" class="btn">View</a>`; // Assuming every row has a view button
+                    
+                    let requiredDoc = parsedData.reqDoc;
+                    console.log(requiredDoc );
+
+                    if (requiredDoc && typeof requiredDoc === 'object' && requiredDoc.full_path) {
+                        // Construct a link using the full_path property
+                        let link = `<a href="uploads/${requiredDoc.full_path}" target="_blank" class="btn">View Document</a>`;
+                        requiredDocCell.innerHTML = link;
+                    } else {
+                        requiredDocCell.textContent = "No documents";
+                    }
+
                     heardFromCell.textContent = `${parsedData.heardFrom}`;
                     personalSavingsCell.textContent = `${parsedData.personalSavings}`;
                     governmentLoansCell.textContent = `${parsedData.governmentLoans}`;

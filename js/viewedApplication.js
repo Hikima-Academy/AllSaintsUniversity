@@ -3,192 +3,99 @@ document.addEventListener('DOMContentLoaded', function() {
     const applicantId = urlParams.get('id');
 
     fetch(`viewedApplication.php?id=${applicantId}`)
-    .then(response => response.text())  // First convert to text to see what's coming
-    .then(text => {
-        try {
-            const data = JSON.parse(text);
-            const table = document.getElementById("myTable");
+        .then(response => response.text())
+        .then(text => {
+            try {
+                const data = JSON.parse(text);
+                const table = document.getElementById("myTable");
+                
 
-            data.forEach(function (item) {
-                let parsedData = JSON.parse(item.data); // Parsing the nested JSON string
-                let row = document.createElement("tr"); // Assuming you want to add rows to a table
-                let serialNumberCell = document.createElement("td");
-                let dateTimeCell = document.createElement("td");
-                let firstNameCell = document.createElement("td");
-                let lastNameCell = document.createElement("td");
-                let programCell = document.createElement("td");
-                let emailCell = document.createElement("td");
-                let homePhoneCell = document.createElement("td");
-                let mobilePhoneCell = document.createElement("td");
-                let termCell = document.createElement("td");
-                let birthDateCell = document.createElement("td");
-                let genderCell = document.createElement("td");
-                let streetAddressCell = document.createElement("td");
-                let streetAddress2Cell = document.createElement("td");
-                let countryCell = document.createElement("td");
-                let cityCell = document.createElement("td");
-                let stateCell = document.createElement("td");
-                let postalCodeCell = document.createElement("td");
-                let citizenshipCell = document.createElement("td");
-                let visaStatusCell = document.createElement("td");
-                let sponsorFirstNameCell = document.createElement("td");
-                let sponsorLastNameCell = document.createElement("td");
-                let sponsorGenderCell = document.createElement("td");
-                let sponsorEmailCell = document.createElement("td");
-                let sponsorPhoneCell = document.createElement("td");
-                let sponsorStreetAddressCell = document.createElement("td");
-                let sponsorStreetAddress2Cell = document.createElement("td");
-                let sponsorCountryCell = document.createElement("td");
-                let sponsorCityCell = document.createElement("td");
-                let sponsorStateCell = document.createElement("td");
-                let sponsorPostalCell = document.createElement("td");
-                let institutionCell = document.createElement("td");
-                let institutionDateFromCell = document.createElement("td");
-                let institutionDateToCell = document.createElement("td");
-                let degreeCell = document.createElement("td");
-                let institutionCityCountryCell = document.createElement("td");
-                let GEDCell = document.createElement("td");
-                let currentlyEnrolledCell = document.createElement("td");
-                let transferStudentCell = document.createElement("td");
-                let withdrawnStatusCell = document.createElement("td");
-                let arrestedStatusCell = document.createElement("td");
-                let substanceAbuseCell = document.createElement("td");
-                let personalStatementCell = document.createElement("td");
-                let requiredDocCell = document.createElement("td");
-                let heardFromCell = document.createElement("td");
-                let personalSavingsCell = document.createElement("td");
-                let governmentLoansCell = document.createElement("td");
-                let familySupportCell = document.createElement("td");
-                let privateLoansCell = document.createElement("td");
-                let otherFinanceCell = document.createElement("td");
-                let AknowledgementCell = document.createElement("td");
-                let applicantSignatureCell = document.createElement("td");
-                let dateSignedCell = document.createElement("td");
-                // let optionCell = document.createElement("td");
+                data.forEach(function (item) {
+                    let parsedData = JSON.parse(item.data); // Parsing the nested JSON string
+                    document.getElementById('applicationTitle').textContent = `${parsedData.firstName}'s Application`; // Updates the title dynamically
 
+                    // Function to create and append row elements
+                    function addRow(name, value) {
+                        let row = document.createElement("tr");
+                        let cellHeader = document.createElement("th");
+                        cellHeader.textContent = name;
+                        let cellData = document.createElement("td");
 
+                        // Check if the value has a link or not
+                        if (value && typeof value === 'object' && value.full_path) {
+                            let link = `<a href="uploads/${value.full_path}" target="_blank" class="btn">View Document</a>`;
+                            cellData.innerHTML = link;
+                        } else {
+                            cellData.textContent = value || "N/A"; // Display "N/A" if value is empty
+                        }
 
-                serialNumberCell.textContent = `${item.serialNumber}`; // Access the parsed data
-                dateTimeCell.textContent = `${item.dateTime}`; // Access the parsed data
-                firstNameCell.textContent = `${parsedData.firstName}`; // Access the parsed data
-                lastNameCell.textContent = `${parsedData.lastName}`; // Access the parsed data
-                programCell.textContent = `${parsedData.Program}`; // Access the parsed data
-                emailCell.textContent = `${parsedData.Email}`; // Access the parsed data
-                homePhoneCell.textContent = `${parsedData.homePhone}`; // Access the parsed data
-                mobilePhoneCell.textContent = `${parsedData.mobilePhone}`; // Access the parsed data
-                termCell.textContent = `${parsedData.Term}`; // Access the parsed data
-                birthDateCell.textContent = `${parsedData.birthDate}`; // Access the parsed data
-                genderCell.textContent = `${parsedData.Gender}`; // Access the parsed data
-                streetAddressCell.textContent = `${parsedData.streetAddress}`; // Access the parsed data
-                streetAddress2Cell.textContent = `${parsedData.streetAddress2}`;
-                countryCell.textContent = `${parsedData.Country}`;
-                cityCell.textContent = `${parsedData.City}`;
-                stateCell.textContent = `${parsedData.stateProvinceRegion}`;
-                postalCodeCell.textContent = `${parsedData.postalCode}`;
-                citizenshipCell.textContent = `${parsedData.Citizenship}`;
-                visaStatusCell.textContent = `${parsedData.visaStatus}`;
-                sponsorFirstNameCell.textContent = `${parsedData.sponsorFirstName}`;
-                sponsorLastNameCell.textContent = `${parsedData.sponsorLastName}`;
-                sponsorGenderCell.textContent = `${parsedData.sponsorGender}`;
-                sponsorEmailCell.textContent = `${parsedData.sponsorEmail}`;
-                sponsorPhoneCell.textContent = `${parsedData.sponsorPhone}`;
-                sponsorStreetAddressCell.textContent = `${parsedData.sponsorStreetAddress}`;
-                sponsorStreetAddress2Cell.textContent = `${parsedData.sponsorStreetAddress2}`;
-                sponsorCountryCell.textContent = `${parsedData.sponsorCountry}`;
-                sponsorCityCell.textContent = `${parsedData.sponsorCity}`;
-                sponsorStateCell.textContent = `${parsedData.sponsorState}`;
-                sponsorPostalCell.textContent = `${parsedData.sponsorPostal}`;
-                institutionCell.textContent = `${parsedData.Institution}`;
-                institutionDateFromCell.textContent = `${parsedData.institutionDateFrom}`;
-                institutionDateToCell.textContent = `${parsedData.institutionDateTo}`;
-                degreeCell.textContent = `${parsedData.Degree}`;
-                institutionCityCountryCell.textContent = `${parsedData.institutionCityCountry}`;
-                GEDCell.textContent = `${parsedData.GED}`;
-                currentlyEnrolledCell.textContent = `${parsedData.currentlyEnrolled}`;
-                transferStudentCell.textContent = `${parsedData.transferStudent}`;
-                withdrawnStatusCell.textContent = `${parsedData.withdrawnStatus}`;
-                arrestedStatusCell.textContent = `${parsedData.arrestedStatus}`;
-                substanceAbuseCell.textContent = `${parsedData.substanceAbuse}`;
-                personalStatementCell.textContent = `${parsedData.personalStatement}`;
-                requiredDocCell.innerHTML = `<a href="https://cloudinary.com/" class="btn">View</a>`; // Assuming every row has a view button
-                heardFromCell.textContent = `${parsedData.heardFrom}`;
-                personalSavingsCell.textContent = `${parsedData.personalSavings}`;
-                governmentLoansCell.textContent = `${parsedData.governmentLoans}`;
-                familySupportCell.textContent = `${parsedData.familySupport}`;
-                privateLoansCell.textContent = `${parsedData.privateLoans}`;
-                otherFinanceCell.textContent = `${parsedData.otherFinance}`;
-                AknowledgementCell.textContent = `${parsedData.Aknowledgement}`;
-                applicantSignatureCell.textContent = `${parsedData.applicantSignature}`;
-                dateSignedCell.textContent = `${parsedData.dateSigned}`;
+                        row.appendChild(cellHeader);
+                        row.appendChild(cellData);
+                        table.appendChild(row);
+                    }
 
-
-
-                // optionCell.innerHTML = `<a href="viewedApplication.html?id=${item.serialNumber}" class="btn">View</a>`; // Assuming every row has a view button
-
-                row.appendChild(serialNumberCell);
-                row.appendChild(dateTimeCell);
-                row.appendChild(firstNameCell);
-                row.appendChild(lastNameCell);
-                row.appendChild(programCell);
-                row.appendChild(emailCell);
-                row.appendChild(homePhoneCell);
-                row.appendChild(mobilePhoneCell);
-                row.appendChild(termCell);
-                row.appendChild(birthDateCell);
-                row.appendChild(genderCell);
-                row.appendChild(streetAddressCell);
-                row.appendChild(streetAddress2Cell);
-                row.appendChild(countryCell);
-                row.appendChild(cityCell);
-                row.appendChild(stateCell);
-                row.appendChild(postalCodeCell);
-                row.appendChild(citizenshipCell);
-                row.appendChild(visaStatusCell);
-                row.appendChild(sponsorFirstNameCell);
-                row.appendChild(sponsorLastNameCell);
-                row.appendChild(sponsorGenderCell);
-                row.appendChild(sponsorEmailCell);
-                row.appendChild(sponsorPhoneCell);
-                row.appendChild(sponsorStreetAddressCell);
-                row.appendChild(sponsorStreetAddress2Cell);
-                row.appendChild(sponsorCountryCell);
-                row.appendChild(sponsorCityCell);
-                row.appendChild(sponsorStateCell);
-                row.appendChild(sponsorPostalCell);
-                row.appendChild(institutionCell);
-                row.appendChild(institutionDateFromCell);
-                row.appendChild(institutionDateToCell);
-                row.appendChild(degreeCell);
-                row.appendChild(institutionCityCountryCell);
-                row.appendChild(GEDCell);
-                row.appendChild(currentlyEnrolledCell);
-                row.appendChild(transferStudentCell);
-                row.appendChild(withdrawnStatusCell);
-                row.appendChild(arrestedStatusCell);
-                row.appendChild(substanceAbuseCell);
-                row.appendChild(personalStatementCell);
-                row.appendChild(requiredDocCell);
-                row.appendChild(heardFromCell);
-                row.appendChild(personalSavingsCell);
-                row.appendChild(governmentLoansCell);
-                row.appendChild(familySupportCell);
-                row.appendChild(privateLoansCell);
-                row.appendChild(otherFinanceCell);
-                row.appendChild(AknowledgementCell);
-                row.appendChild(applicantSignatureCell);
-                row.appendChild(dateSignedCell);
-                // row.appendChild(optionCell);
-
-                table.appendChild(row); // Append the new row to the table
-            });
-        } catch (error) {
-            console.error('Error parsing JSON:', text);
-            throw error;  // Re-throw to be caught by the catch block below
-        }
-    })
-    .catch(error => console.error('Error fetching data:', error));
+                    // Append data to the table
+                    addRow("Serial Number", item.serialNumber);
+                    addRow("DateTime", item.dateTime);
+                    addRow("First Name", parsedData.firstName);
+                    addRow("Last Name", parsedData.lastName);
+                    addRow("Program", parsedData.Program);
+                    addRow("Email", parsedData.Email);
+                    addRow("Home Phone", parsedData.homePhone);
+                    addRow("Mobile Phone", parsedData.mobilePhone);
+                    addRow("Term", parsedData.Term);
+                    addRow("Birth Date", parsedData.birthDate);
+                    addRow("Gender", parsedData.Gender);
+                    addRow("Street Address", parsedData.streetAddress);
+                    addRow("Street Address 2", parsedData.streetAddress2);
+                    addRow("Country", parsedData.Country);
+                    addRow("City", parsedData.City);
+                    addRow("State/Province/Region", parsedData.stateProvinceRegion);
+                    addRow("Postal Code", parsedData.postalCode);
+                    addRow("Citizenship", parsedData.Citizenship);
+                    addRow("Visa Status", parsedData.visaStatus);
+                    addRow("Sponsor First Name", parsedData.sponsorFirstName);
+                    addRow("Sponsor Last Name", parsedData.sponsorLastName);
+                    addRow("Sponsor Gender", parsedData.sponsorGender);
+                    addRow("Sponsor Email", parsedData.sponsorEmail);
+                    addRow("Sponsor Phone", parsedData.sponsorPhone);
+                    addRow("Sponsor Street Address", parsedData.sponsorStreetAddress);
+                    addRow("Sponsor Street Address 2", parsedData.sponsorStreetAddress2);
+                    addRow("Sponsor Country", parsedData.sponsorCountry);
+                    addRow("Sponsor City", parsedData.sponsorCity);
+                    addRow("Sponsor State", parsedData.sponsorState);
+                    addRow("Sponsor Postal", parsedData.sponsorPostal);
+                    addRow("Institution", parsedData.Institution);
+                    addRow("Institution Date From", parsedData.institutionDateFrom);
+                    addRow("Institution Date To", parsedData.institutionDateTo);
+                    addRow("Degree", parsedData.Degree);
+                    addRow("Institution City/Country", parsedData.institutionCityCountry);
+                    addRow("GED", parsedData.GED);
+                    addRow("Currently Enrolled", parsedData.currentlyEnrolled);
+                    addRow("Transfer Student", parsedData.transferStudent);
+                    addRow("Withdrawn Status", parsedData.withdrawnStatus);
+                    addRow("Arrested Status", parsedData.arrestedStatus);
+                    addRow("Substance Abuse", parsedData.substanceAbuse);
+                    addRow("Personal Statement", parsedData.personalStatement);
+                    addRow("Required Documents", parsedData.reqDoc);
+                    addRow("Heard From", parsedData.heardFrom);
+                    addRow("Personal Savings", parsedData.personalSavings);
+                    addRow("Government Loans", parsedData.governmentLoans);
+                    addRow("Family Support", parsedData.familySupport);
+                    addRow("Private Loans", parsedData.privateLoans);
+                    addRow("Other Finance", parsedData.otherFinance);
+                    addRow("Acknowledgement", parsedData.Aknowledgement);
+                    addRow("Applicant Signature", parsedData.applicantSignature);
+                    addRow("Date Signed", parsedData.dateSigned);
+                });
+            } catch (error) {
+                console.error('Error parsing JSON:', text);
+                throw error;
+            }
+        })
+        .catch(error => console.error('Error fetching data:', error));
 });
 
 document.getElementById('exportBtn').addEventListener('click', function () {
-window.location.href = 'export.php';
+    window.location.href = 'export.php';
 });

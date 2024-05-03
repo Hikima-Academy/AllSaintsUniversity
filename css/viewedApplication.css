@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centers everything vertically */
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.container {
+    width: 90vw; /* Adjust based on your preference */
+    max-width: 1200px; /* Maximum width */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    background: white;
+    padding: 20px;
+    overflow-x: auto; /* Allows horizontal scrolling if needed */
+}
+
+.title {
+    text-align: center; /* Centers the title and buttons */
+    margin-bottom: 20px;
+}
+
+.title h2 {
+    padding-bottom: 30px;
+}
+
+.btn {
+    background: #092e56;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    margin: 10px;
+    cursor: pointer;
+    margin-top: 40px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: rgb(99, 166, 164);
+}
+
+.applications {
+    overflow-x: auto; /* Ensure the table is scrollable horizontally */
+}
+
+table {
+    width: 100%;
+    margin: auto; /* Center the table horizontally */
+    border-collapse: collapse; /* Ensures borders between cells are shared */
+}
+
+th, td {
+    text-align: center; /* Centers text in table headers and cells */
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Adds a light border to the bottom of each cell */
+}
+
