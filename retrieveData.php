@@ -21,14 +21,16 @@ if ($conn->connect_error) {
 }
 
 // Prepare the SQL query
-$sql = "SELECT serialNumber, 
-               JSON_UNQUOTE(JSON_EXTRACT(data, '$.firstName')) AS firstName, 
-               JSON_UNQUOTE(JSON_EXTRACT(data, '$.lastName')) AS lastName, 
-               JSON_UNQUOTE(JSON_EXTRACT(data, '$.Program')) AS program, 
-               JSON_UNQUOTE(JSON_EXTRACT(data, '$.Email')) AS email, 
-               JSON_UNQUOTE(JSON_EXTRACT(data, '$.homePhone')) AS homePhone, 
-               JSON_UNQUOTE(JSON_EXTRACT(data, '$.Term')) AS term 
+$sql = "SELECT
+           MAX(serialNumber) AS serialNumber,
+           JSON_UNQUOTE(JSON_EXTRACT(data, '$.firstName')) AS firstName, 
+           JSON_UNQUOTE(JSON_EXTRACT(data, '$.lastName')) AS lastName, 
+           JSON_UNQUOTE(JSON_EXTRACT(data, '$.Program')) AS program, 
+           JSON_UNQUOTE(JSON_EXTRACT(data, '$.Email')) AS email, 
+           JSON_UNQUOTE(JSON_EXTRACT(data, '$.homePhone')) AS homePhone, 
+           JSON_UNQUOTE(JSON_EXTRACT(data, '$.Term')) AS term 
         FROM register 
+        GROUP BY firstName, lastName
         ORDER BY serialNumber ASC 
         LIMIT 15";
 // serialNumber, firstName, lastName, Program AS program, Email AS email, homePhone, Term AS term 

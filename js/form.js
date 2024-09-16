@@ -34,10 +34,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const birthDateInput = document.querySelector('input[name="bday"]');
     const birthDate = new Date(birthDateInput.value);
     const currentDate = new Date();
-    const tenYearsAgo = new Date(currentDate.getFullYear() - 10, currentDate.getMonth(), currentDate.getDate());
+    const sixteenYearsAgo = new Date(currentDate.getFullYear() - 16, currentDate.getMonth(), currentDate.getDate());
 
-    if (birthDate > tenYearsAgo) {
-      alert('Please enter a birth year more than 10 years ago.');
+    if (birthDate > sixteenYearsAgo) {
+      alert('Please enter a birth year more than 16 years ago.');
       birthDateInput.style.borderColor = 'red';
       return false;
     } else {
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const dateTo = new Date(dateToInput.value);
 
     if (dateFrom >= dateTo) {
-      alert('The "Date From" must be before the "Date To".');
+      alert('The "Date From" must be before the "Date To" in the "Academic History" section.');
       dateFromInput.style.borderColor = 'red';
       dateToInput.style.borderColor = 'red';
       return false;
